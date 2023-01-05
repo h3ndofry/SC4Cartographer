@@ -710,6 +710,10 @@ namespace SC4CartographerUI
             this.AvenueEditButton.Click += new System.EventHandler(this.AvenueEditButton_Click);
             this.RailwayEditButton.Click += new System.EventHandler(this.RailwayEditButton_Click);
             this.SubwayEditButton.Click += new System.EventHandler(this.SubwayEditButton_Click);
+            this.LightRailEditButton.Click += new System.EventHandler(this.LightRailEditButton_Click);
+            this.MonorailEditButton.Click += new System.EventHandler(this.MonorailEditButton_Click);
+            this.HighwayEditButton.Click += new System.EventHandler(this.HighwayEditButton_Click);
+            this.DirtRoadEditButton.Click += new System.EventHandler(this.DirtRoadEditButton_Click);
             this.EditOutputPathButton.Click += new System.EventHandler(this.EditOutputPathButton_Click);
 
             this.BuildingsEditButton.Click += new System.EventHandler(this.BuildingsEditButton_Click);
@@ -848,6 +852,10 @@ namespace SC4CartographerUI
             this.AvenueEditButton.Click -= new System.EventHandler(this.AvenueEditButton_Click);
             this.RailwayEditButton.Click -= new System.EventHandler(this.RailwayEditButton_Click);
             this.SubwayEditButton.Click -= new System.EventHandler(this.SubwayEditButton_Click);
+            this.LightRailEditButton.Click -= new System.EventHandler(this.LightRailEditButton_Click);
+            this.MonorailEditButton.Click -= new System.EventHandler(this.MonorailEditButton_Click);
+            this.HighwayEditButton.Click -= new System.EventHandler(this.HighwayEditButton_Click);
+            this.DirtRoadEditButton.Click -= new System.EventHandler(this.DirtRoadEditButton_Click);
             this.EditOutputPathButton.Click -= new System.EventHandler(this.EditOutputPathButton_Click);
             this.BuildingsEditButton.Click -= new System.EventHandler(this.BuildingsEditButton_Click);
             this.BuildingsOutlineEditButton.Click -= new System.EventHandler(this.BuildingsOutlineEditButton_Click);
@@ -987,6 +995,10 @@ namespace SC4CartographerUI
             AvenueTextBox.BackColor = parameters.ColorDictionary[MapColorObject.Avenue];
             RailwayTextBox.BackColor = parameters.ColorDictionary[MapColorObject.Railway];
             SubwayTextBox.BackColor = parameters.ColorDictionary[MapColorObject.Subway];
+            LightRailTextBox.BackColor = parameters.ColorDictionary[MapColorObject.LightRail];
+            MonorailTextBox.BackColor = parameters.ColorDictionary[MapColorObject.Monorail];
+            HighwayTextBox.BackColor = parameters.ColorDictionary[MapColorObject.MaxisHighway];
+            DirtRoadTextBox.BackColor = parameters.ColorDictionary[MapColorObject.DirtRoad];
 
             // Building stuff
             BuildingsTextBox.BackColor = parameters.ColorDictionary[MapColorObject.Buildings];
@@ -1294,6 +1306,10 @@ namespace SC4CartographerUI
             parameters.ColorDictionary[MapColorObject.Avenue] = AvenueTextBox.BackColor;
             parameters.ColorDictionary[MapColorObject.Railway] = RailwayTextBox.BackColor;
             parameters.ColorDictionary[MapColorObject.Subway] = SubwayTextBox.BackColor;
+            parameters.ColorDictionary[MapColorObject.LightRail] = LightRailTextBox.BackColor;
+            parameters.ColorDictionary[MapColorObject.Monorail] = MonorailTextBox.BackColor;
+            parameters.ColorDictionary[MapColorObject.MaxisHighway] = HighwayTextBox.BackColor;
+            parameters.ColorDictionary[MapColorObject.DirtRoad] = DirtRoadTextBox.BackColor;
 
             parameters.ColorDictionary[MapColorObject.Buildings] = BuildingsTextBox.BackColor;
             parameters.ColorDictionary[MapColorObject.BuildingsOutline] = BuildingsOutlineTextBox.BackColor;
@@ -1555,6 +1571,34 @@ namespace SC4CartographerUI
                                 CheckAllParents(node.Parent, true);
                             }
                             break;
+                        case "LightRail":
+                            if (objects.Contains(MapObject.LightRailNetwork1))
+                            {
+                                node.Checked = true;
+                                CheckAllParents(node.Parent, true);
+                            }
+                            break;
+                        case "Monorail":
+                            if (objects.Contains(MapObject.MonorailNetwork1))
+                            {
+                                node.Checked = true;
+                                CheckAllParents(node.Parent, true);
+                            }
+                            break;
+                        case "MaxisHighways":
+                            if (objects.Contains(MapObject.ElevatedHighwayNetwork1) || objects.Contains(MapObject.GroundHighwayNetwork1))
+                            {
+                                node.Checked = true;
+                                CheckAllParents(node.Parent, true);
+                            }
+                            break;
+                        case "DirtRoad":
+                            if (objects.Contains(MapObject.DirtRoadNetwork1))
+                            {
+                                node.Checked = true;
+                                CheckAllParents(node.Parent, true);
+                            }
+                            break;
                         case "TerrainMap":
                             if (objects.Contains(MapObject.TerrainMap))
                             {
@@ -1655,6 +1699,19 @@ namespace SC4CartographerUI
                                 break;
                             case "Subways":
                                 objects.Add(MapObject.SubwayNetwork2);
+                                break;
+                            case "LightRail":
+                                objects.Add(MapObject.LightRailNetwork1);
+                                break;
+                            case "Monorail":
+                                objects.Add(MapObject.MonorailNetwork1);
+                                break;
+                            case "MaxisHighways":
+                                objects.Add(MapObject.ElevatedHighwayNetwork1);
+                                objects.Add(MapObject.GroundHighwayNetwork1);
+                                break;
+                            case "DirtRoad":
+                                objects.Add(MapObject.DirtRoadNetwork1);
                                 break;
                             case "Buildings":
                                 objects.Add(MapObject.Building);
@@ -3048,6 +3105,70 @@ namespace SC4CartographerUI
             if (colorDialog.ShowDialog(this) == DialogResult.OK)
             {
                 SubwayTextBox.BackColor = colorDialog.Color;
+
+                SetAndUpdateMapCreationParameters(GetParametersFromAppearanceUIValues());
+            }
+        }
+
+        private void LightRailEditButton_Click(object sender, EventArgs e)
+        {
+            colorDialog = new ColorDialog();
+            colorDialog.Color = LightRailTextBox.BackColor;
+            colorDialog.AllowFullOpen = true;
+            colorDialog.FullOpen = true;
+            //colorDialog.StartPosition = FormStartPosition.CenterParent;
+
+            if (colorDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                LightRailTextBox.BackColor = colorDialog.Color;
+
+                SetAndUpdateMapCreationParameters(GetParametersFromAppearanceUIValues());
+            }
+        }
+
+        private void MonorailEditButton_Click(object sender, EventArgs e)
+        {
+            colorDialog = new ColorDialog();
+            colorDialog.Color = MonorailTextBox.BackColor;
+            colorDialog.AllowFullOpen = true;
+            colorDialog.FullOpen = true;
+            //colorDialog.StartPosition = FormStartPosition.CenterParent;
+
+            if (colorDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                MonorailTextBox.BackColor = colorDialog.Color;
+
+                SetAndUpdateMapCreationParameters(GetParametersFromAppearanceUIValues());
+            }
+        }
+
+        private void HighwayEditButton_Click(object sender, EventArgs e)
+        {
+            colorDialog = new ColorDialog();
+            colorDialog.Color = HighwayTextBox.BackColor;
+            colorDialog.AllowFullOpen = true;
+            colorDialog.FullOpen = true;
+            //colorDialog.StartPosition = FormStartPosition.CenterParent;
+
+            if (colorDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                HighwayTextBox.BackColor = colorDialog.Color;
+
+                SetAndUpdateMapCreationParameters(GetParametersFromAppearanceUIValues());
+            }
+        }
+
+        private void DirtRoadEditButton_Click(object sender, EventArgs e)
+        {
+            colorDialog = new ColorDialog();
+            colorDialog.Color = HighwayTextBox.BackColor;
+            colorDialog.AllowFullOpen = true;
+            colorDialog.FullOpen = true;
+            //colorDialog.StartPosition = FormStartPosition.CenterParent;
+
+            if (colorDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                DirtRoadTextBox.BackColor = colorDialog.Color;
 
                 SetAndUpdateMapCreationParameters(GetParametersFromAppearanceUIValues());
             }

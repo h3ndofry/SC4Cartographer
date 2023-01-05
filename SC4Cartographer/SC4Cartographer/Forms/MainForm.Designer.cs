@@ -75,13 +75,21 @@
             System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Avenues");
             System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Railways");
             System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Subways");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Transport", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Light Rail");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Monorail");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Maxis Highways");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Dirt Road / RHW");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Transport", new System.Windows.Forms.TreeNode[] {
             treeNode22,
             treeNode23,
             treeNode24,
             treeNode25,
             treeNode26,
-            treeNode27});
+            treeNode27,
+            treeNode28,
+            treeNode29,
+            treeNode30,
+            treeNode31});
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.OpenTextLabel = new System.Windows.Forms.Label();
@@ -195,6 +203,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.PloppedBuildingsTextbox = new System.Windows.Forms.TextBox();
             this.TransportTabPage = new System.Windows.Forms.TabPage();
+            this.DirtRoadEditButton = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.DirtRoadTextBox = new System.Windows.Forms.TextBox();
+            this.HighwayEditButton = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.HighwayTextBox = new System.Windows.Forms.TextBox();
             this.SubwayEditButton = new System.Windows.Forms.Button();
             this.label45 = new System.Windows.Forms.Label();
             this.SubwayTextBox = new System.Windows.Forms.TextBox();
@@ -349,6 +363,12 @@
             this.SizeLabel = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.LightRailEditButton = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.LightRailTextBox = new System.Windows.Forms.TextBox();
+            this.MonorailEditButton = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.MonorailTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MapPictureBox)).BeginInit();
@@ -399,9 +419,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Location = new System.Drawing.Point(204, 26);
+            this.groupBox1.Location = new System.Drawing.Point(306, 40);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(665, 677);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(998, 1042);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Preview";
@@ -415,18 +437,20 @@
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.Controls.Add(this.OpenTextLabel);
             this.panel1.Controls.Add(this.MapPictureBox);
-            this.panel1.Location = new System.Drawing.Point(6, 20);
+            this.panel1.Location = new System.Drawing.Point(9, 31);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(653, 651);
+            this.panel1.Size = new System.Drawing.Size(980, 1002);
             this.panel1.TabIndex = 2;
             this.panel1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseWheel);
             // 
             // OpenTextLabel
             // 
             this.OpenTextLabel.AutoSize = true;
-            this.OpenTextLabel.Location = new System.Drawing.Point(153, 294);
+            this.OpenTextLabel.Location = new System.Drawing.Point(230, 452);
+            this.OpenTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OpenTextLabel.Name = "OpenTextLabel";
-            this.OpenTextLabel.Size = new System.Drawing.Size(400, 13);
+            this.OpenTextLabel.Size = new System.Drawing.Size(595, 20);
             this.OpenTextLabel.TabIndex = 3;
             this.OpenTextLabel.Text = "Open a save game from the left hand side or by going to File -> Open -> Save game" +
     "";
@@ -435,6 +459,7 @@
             // 
             this.MapPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.MapPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.MapPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MapPictureBox.Name = "MapPictureBox";
             this.MapPictureBox.Size = new System.Drawing.Size(653, 651);
             this.MapPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -449,9 +474,10 @@
             // 
             this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveButton.Enabled = false;
-            this.SaveButton.Location = new System.Drawing.Point(875, 665);
+            this.SaveButton.Location = new System.Drawing.Point(1312, 1023);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(295, 38);
+            this.SaveButton.Size = new System.Drawing.Size(442, 58);
             this.SaveButton.TabIndex = 0;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -465,9 +491,11 @@
             this.groupBox6.Controls.Add(this.FileBrowserButton);
             this.groupBox6.Controls.Add(this.SavePathTextbox);
             this.groupBox6.Controls.Add(this.FileTreeView);
-            this.groupBox6.Location = new System.Drawing.Point(12, 26);
+            this.groupBox6.Location = new System.Drawing.Point(18, 40);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(186, 677);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox6.Size = new System.Drawing.Size(279, 1042);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Save games";
@@ -478,9 +506,10 @@
             this.FilterNewCitiesCheckbox.AutoSize = true;
             this.FilterNewCitiesCheckbox.Checked = true;
             this.FilterNewCitiesCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.FilterNewCitiesCheckbox.Location = new System.Drawing.Point(7, 654);
+            this.FilterNewCitiesCheckbox.Location = new System.Drawing.Point(10, 1008);
+            this.FilterNewCitiesCheckbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FilterNewCitiesCheckbox.Name = "FilterNewCitiesCheckbox";
-            this.FilterNewCitiesCheckbox.Size = new System.Drawing.Size(144, 17);
+            this.FilterNewCitiesCheckbox.Size = new System.Drawing.Size(210, 24);
             this.FilterNewCitiesCheckbox.TabIndex = 4;
             this.FilterNewCitiesCheckbox.Text = "Filter \'New City\' save files";
             this.FilterNewCitiesCheckbox.UseVisualStyleBackColor = true;
@@ -489,9 +518,10 @@
             // FileBrowserButton
             // 
             this.FileBrowserButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FileBrowserButton.Location = new System.Drawing.Point(155, 20);
+            this.FileBrowserButton.Location = new System.Drawing.Point(232, 31);
+            this.FileBrowserButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FileBrowserButton.Name = "FileBrowserButton";
-            this.FileBrowserButton.Size = new System.Drawing.Size(25, 20);
+            this.FileBrowserButton.Size = new System.Drawing.Size(38, 31);
             this.FileBrowserButton.TabIndex = 3;
             this.FileBrowserButton.Text = "...";
             this.FileBrowserButton.UseVisualStyleBackColor = true;
@@ -501,9 +531,10 @@
             // 
             this.SavePathTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SavePathTextbox.Location = new System.Drawing.Point(7, 20);
+            this.SavePathTextbox.Location = new System.Drawing.Point(10, 31);
+            this.SavePathTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SavePathTextbox.Name = "SavePathTextbox";
-            this.SavePathTextbox.Size = new System.Drawing.Size(142, 20);
+            this.SavePathTextbox.Size = new System.Drawing.Size(211, 26);
             this.SavePathTextbox.TabIndex = 1;
             this.SavePathTextbox.TextChanged += new System.EventHandler(this.SavePathTextbox_TextChanged);
             // 
@@ -514,10 +545,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FileTreeView.ImageIndex = 0;
             this.FileTreeView.ImageList = this.FileTreeViewImageList;
-            this.FileTreeView.Location = new System.Drawing.Point(7, 46);
+            this.FileTreeView.Location = new System.Drawing.Point(10, 71);
+            this.FileTreeView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FileTreeView.Name = "FileTreeView";
             this.FileTreeView.SelectedImageIndex = 0;
-            this.FileTreeView.Size = new System.Drawing.Size(174, 602);
+            this.FileTreeView.Size = new System.Drawing.Size(259, 924);
             this.FileTreeView.TabIndex = 0;
             this.FileTreeView.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.FileTreeView_BeforeExpand);
             this.FileTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.FileTreeView_OnNodeMouseDoubleClick);
@@ -543,13 +575,15 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.appearanceStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1182, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1773, 35);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -563,7 +597,7 @@
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // loadSC4SaveToolStripMenuItem
@@ -572,35 +606,35 @@
             this.savegameToolStripMenuItem,
             this.folderToolStripMenuItem});
             this.loadSC4SaveToolStripMenuItem.Name = "loadSC4SaveToolStripMenuItem";
-            this.loadSC4SaveToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.loadSC4SaveToolStripMenuItem.Size = new System.Drawing.Size(301, 34);
             this.loadSC4SaveToolStripMenuItem.Text = "Open";
             // 
             // savegameToolStripMenuItem
             // 
             this.savegameToolStripMenuItem.Name = "savegameToolStripMenuItem";
             this.savegameToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.savegameToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.savegameToolStripMenuItem.Size = new System.Drawing.Size(279, 34);
             this.savegameToolStripMenuItem.Text = "Save Game...";
             this.savegameToolStripMenuItem.Click += new System.EventHandler(this.savegameToolStripMenuItem_Click);
             // 
             // folderToolStripMenuItem
             // 
             this.folderToolStripMenuItem.Name = "folderToolStripMenuItem";
-            this.folderToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.folderToolStripMenuItem.Size = new System.Drawing.Size(279, 34);
             this.folderToolStripMenuItem.Text = "Folder...";
             this.folderToolStripMenuItem.Click += new System.EventHandler(this.folderToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(195, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(298, 6);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(301, 34);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -610,19 +644,19 @@
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(301, 34);
             this.saveAsToolStripMenuItem.Text = "Save As....";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(195, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(298, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(301, 34);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -634,32 +668,32 @@
             this.toolStripSeparator6,
             this.restoreDefaultsToolStripMenuItem});
             this.appearanceStripMenuItem.Name = "appearanceStripMenuItem";
-            this.appearanceStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.appearanceStripMenuItem.Size = new System.Drawing.Size(122, 29);
             this.appearanceStripMenuItem.Text = "Appearance";
             // 
             // saveToolStripMenuItem1
             // 
             this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(159, 22);
+            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(243, 34);
             this.saveToolStripMenuItem1.Text = "Save...";
             this.saveToolStripMenuItem1.Click += new System.EventHandler(this.saveToolStripMenuItem1_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
             this.loadToolStripMenuItem.Text = "Load...";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(156, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(240, 6);
             // 
             // restoreDefaultsToolStripMenuItem
             // 
             this.restoreDefaultsToolStripMenuItem.Name = "restoreDefaultsToolStripMenuItem";
-            this.restoreDefaultsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.restoreDefaultsToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
             this.restoreDefaultsToolStripMenuItem.Text = "Restore Defaults";
             this.restoreDefaultsToolStripMenuItem.Click += new System.EventHandler(this.restoreDefaultsToolStripMenuItem_Click);
             // 
@@ -675,68 +709,70 @@
             this.toolStripSeparator3,
             this.toolStripMenuItem5});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // UpdatesToolStripMenuItem
             // 
             this.UpdatesToolStripMenuItem.Name = "UpdatesToolStripMenuItem";
-            this.UpdatesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.UpdatesToolStripMenuItem.Size = new System.Drawing.Size(260, 34);
             this.UpdatesToolStripMenuItem.Text = "Check for Updates";
             this.UpdatesToolStripMenuItem.Click += new System.EventHandler(this.UpdatesToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(168, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(257, 6);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(171, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(260, 34);
             this.toolStripMenuItem3.Text = "Project Webpage";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.projectWebpageToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(171, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(260, 34);
             this.toolStripMenuItem4.Text = "Report an Issue";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.reportABugToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(168, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(257, 6);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(171, 22);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(260, 34);
             this.toolStripMenuItem6.Text = "Show Log...";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(168, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(257, 6);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(171, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(260, 34);
             this.toolStripMenuItem5.Text = "About";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MapSizeToolStripStatusLabel,
             this.MemoryUsedToolStripStatusLabel,
             this.MousePositionToolStripStatusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 709);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1092);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1182, 24);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1773, 36);
             this.statusStrip1.TabIndex = 10;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -745,7 +781,7 @@
             this.MapSizeToolStripStatusLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
             this.MapSizeToolStripStatusLabel.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.MapSizeToolStripStatusLabel.Name = "MapSizeToolStripStatusLabel";
-            this.MapSizeToolStripStatusLabel.Size = new System.Drawing.Size(68, 19);
+            this.MapSizeToolStripStatusLabel.Size = new System.Drawing.Size(103, 29);
             this.MapSizeToolStripStatusLabel.Text = "Size: 0x0px";
             this.MapSizeToolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -754,14 +790,14 @@
             this.MemoryUsedToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.MemoryUsedToolStripStatusLabel.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.MemoryUsedToolStripStatusLabel.Name = "MemoryUsedToolStripStatusLabel";
-            this.MemoryUsedToolStripStatusLabel.Size = new System.Drawing.Size(121, 19);
+            this.MemoryUsedToolStripStatusLabel.Size = new System.Drawing.Size(183, 29);
             this.MemoryUsedToolStripStatusLabel.Text = "Memory Usage: 0mb";
             // 
             // MousePositionToolStripStatusLabel
             // 
             this.MousePositionToolStripStatusLabel.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.MousePositionToolStripStatusLabel.Name = "MousePositionToolStripStatusLabel";
-            this.MousePositionToolStripStatusLabel.Size = new System.Drawing.Size(12, 19);
+            this.MousePositionToolStripStatusLabel.Size = new System.Drawing.Size(19, 29);
             this.MousePositionToolStripStatusLabel.Text = "-";
             this.MousePositionToolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -770,9 +806,11 @@
             this.AppearanceGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AppearanceGroupBox.Controls.Add(this.VisibleObjectsTreeView);
             this.AppearanceGroupBox.Enabled = false;
-            this.AppearanceGroupBox.Location = new System.Drawing.Point(875, 27);
+            this.AppearanceGroupBox.Location = new System.Drawing.Point(1312, 42);
+            this.AppearanceGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AppearanceGroupBox.Name = "AppearanceGroupBox";
-            this.AppearanceGroupBox.Size = new System.Drawing.Size(295, 195);
+            this.AppearanceGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AppearanceGroupBox.Size = new System.Drawing.Size(442, 300);
             this.AppearanceGroupBox.TabIndex = 11;
             this.AppearanceGroupBox.TabStop = false;
             this.AppearanceGroupBox.Text = "Layers";
@@ -780,7 +818,8 @@
             // VisibleObjectsTreeView
             // 
             this.VisibleObjectsTreeView.CheckBoxes = true;
-            this.VisibleObjectsTreeView.Location = new System.Drawing.Point(6, 19);
+            this.VisibleObjectsTreeView.Location = new System.Drawing.Point(9, 29);
+            this.VisibleObjectsTreeView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.VisibleObjectsTreeView.Name = "VisibleObjectsTreeView";
             treeNode1.Name = "Node1";
             treeNode1.Tag = "TerrainMap";
@@ -863,14 +902,26 @@
             treeNode27.Name = "Subways";
             treeNode27.Tag = "Subways";
             treeNode27.Text = "Subways";
-            treeNode28.Name = "Node0";
-            treeNode28.Text = "Transport";
+            treeNode28.Name = "LightRail";
+            treeNode28.Tag = "LightRail";
+            treeNode28.Text = "Light Rail";
+            treeNode29.Name = "Monorail";
+            treeNode29.Tag = "Monorail";
+            treeNode29.Text = "Monorail";
+            treeNode30.Name = "MaxisHighways";
+            treeNode30.Tag = "MaxisHighways";
+            treeNode30.Text = "Maxis Highways";
+            treeNode31.Name = "DirtRoad";
+            treeNode31.Tag = "DirtRoad";
+            treeNode31.Text = "Dirt Road / RHW";
+            treeNode32.Name = "Node0";
+            treeNode32.Text = "Transport";
             this.VisibleObjectsTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode21,
-            treeNode28});
-            this.VisibleObjectsTreeView.Size = new System.Drawing.Size(283, 168);
+            treeNode32});
+            this.VisibleObjectsTreeView.Size = new System.Drawing.Size(422, 256);
             this.VisibleObjectsTreeView.TabIndex = 1;
             this.VisibleObjectsTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.VisibleObjectsTreeView_AfterCheck);
             // 
@@ -878,9 +929,10 @@
             // 
             this.BlendTerrainColorsCheckBox.AutoSize = true;
             this.BlendTerrainColorsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BlendTerrainColorsCheckBox.Location = new System.Drawing.Point(10, 9);
+            this.BlendTerrainColorsCheckBox.Location = new System.Drawing.Point(15, 14);
+            this.BlendTerrainColorsCheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BlendTerrainColorsCheckBox.Name = "BlendTerrainColorsCheckBox";
-            this.BlendTerrainColorsCheckBox.Size = new System.Drawing.Size(121, 17);
+            this.BlendTerrainColorsCheckBox.Size = new System.Drawing.Size(178, 24);
             this.BlendTerrainColorsCheckBox.TabIndex = 70;
             this.BlendTerrainColorsCheckBox.Text = "Blend Terrain Colors";
             this.BlendTerrainColorsCheckBox.UseVisualStyleBackColor = true;
@@ -889,9 +941,10 @@
             // 
             this.OutputFormatLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputFormatLabel.AutoSize = true;
-            this.OutputFormatLabel.Location = new System.Drawing.Point(12, 48);
+            this.OutputFormatLabel.Location = new System.Drawing.Point(18, 74);
+            this.OutputFormatLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OutputFormatLabel.Name = "OutputFormatLabel";
-            this.OutputFormatLabel.Size = new System.Drawing.Size(39, 13);
+            this.OutputFormatLabel.Size = new System.Drawing.Size(60, 20);
             this.OutputFormatLabel.TabIndex = 69;
             this.OutputFormatLabel.Text = "Format";
             // 
@@ -899,9 +952,10 @@
             // 
             this.JPEGRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.JPEGRadioButton.AutoSize = true;
-            this.JPEGRadioButton.Location = new System.Drawing.Point(150, 46);
+            this.JPEGRadioButton.Location = new System.Drawing.Point(225, 73);
+            this.JPEGRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.JPEGRadioButton.Name = "JPEGRadioButton";
-            this.JPEGRadioButton.Size = new System.Drawing.Size(52, 17);
+            this.JPEGRadioButton.Size = new System.Drawing.Size(76, 24);
             this.JPEGRadioButton.TabIndex = 68;
             this.JPEGRadioButton.TabStop = true;
             this.JPEGRadioButton.Text = "JPEG";
@@ -912,9 +966,10 @@
             // 
             this.PNGRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.PNGRadioButton.AutoSize = true;
-            this.PNGRadioButton.Location = new System.Drawing.Point(96, 46);
+            this.PNGRadioButton.Location = new System.Drawing.Point(144, 73);
+            this.PNGRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PNGRadioButton.Name = "PNGRadioButton";
-            this.PNGRadioButton.Size = new System.Drawing.Size(48, 17);
+            this.PNGRadioButton.Size = new System.Drawing.Size(68, 24);
             this.PNGRadioButton.TabIndex = 67;
             this.PNGRadioButton.TabStop = true;
             this.PNGRadioButton.Text = "PNG";
@@ -924,9 +979,10 @@
             // EditOutputPathButton
             // 
             this.EditOutputPathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.EditOutputPathButton.Location = new System.Drawing.Point(257, 67);
+            this.EditOutputPathButton.Location = new System.Drawing.Point(386, 103);
+            this.EditOutputPathButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EditOutputPathButton.Name = "EditOutputPathButton";
-            this.EditOutputPathButton.Size = new System.Drawing.Size(30, 23);
+            this.EditOutputPathButton.Size = new System.Drawing.Size(45, 35);
             this.EditOutputPathButton.TabIndex = 63;
             this.EditOutputPathButton.Text = "...";
             this.EditOutputPathButton.UseVisualStyleBackColor = true;
@@ -935,18 +991,20 @@
             // 
             this.PixelLabel2.AutoSize = true;
             this.PixelLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PixelLabel2.Location = new System.Drawing.Point(175, 9);
+            this.PixelLabel2.Location = new System.Drawing.Point(262, 14);
+            this.PixelLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PixelLabel2.Name = "PixelLabel2";
-            this.PixelLabel2.Size = new System.Drawing.Size(18, 13);
+            this.PixelLabel2.Size = new System.Drawing.Size(26, 20);
             this.PixelLabel2.TabIndex = 59;
             this.PixelLabel2.Text = "px";
             // 
             // OutputPathTextbox
             // 
             this.OutputPathTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.OutputPathTextbox.Location = new System.Drawing.Point(96, 69);
+            this.OutputPathTextbox.Location = new System.Drawing.Point(144, 106);
+            this.OutputPathTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OutputPathTextbox.Name = "OutputPathTextbox";
-            this.OutputPathTextbox.Size = new System.Drawing.Size(155, 20);
+            this.OutputPathTextbox.Size = new System.Drawing.Size(230, 26);
             this.OutputPathTextbox.TabIndex = 62;
             this.OutputPathTextbox.TextChanged += new System.EventHandler(this.OutputPathTextbox_TextChanged);
             // 
@@ -954,9 +1012,10 @@
             // 
             this.OutputPathLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.OutputPathLabel.AutoSize = true;
-            this.OutputPathLabel.Location = new System.Drawing.Point(13, 72);
+            this.OutputPathLabel.Location = new System.Drawing.Point(20, 111);
+            this.OutputPathLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OutputPathLabel.Name = "OutputPathLabel";
-            this.OutputPathLabel.Size = new System.Drawing.Size(29, 13);
+            this.OutputPathLabel.Size = new System.Drawing.Size(42, 20);
             this.OutputPathLabel.TabIndex = 61;
             this.OutputPathLabel.Text = "Path";
             // 
@@ -964,9 +1023,10 @@
             // 
             this.PixelLabel1.AutoSize = true;
             this.PixelLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PixelLabel1.Location = new System.Drawing.Point(175, 9);
+            this.PixelLabel1.Location = new System.Drawing.Point(262, 14);
+            this.PixelLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PixelLabel1.Name = "PixelLabel1";
-            this.PixelLabel1.Size = new System.Drawing.Size(18, 13);
+            this.PixelLabel1.Size = new System.Drawing.Size(26, 20);
             this.PixelLabel1.TabIndex = 58;
             this.PixelLabel1.Text = "px";
             // 
@@ -974,40 +1034,44 @@
             // 
             this.ShowZoneOutlinesCheckbox.AutoSize = true;
             this.ShowZoneOutlinesCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ShowZoneOutlinesCheckbox.Location = new System.Drawing.Point(16, 32);
+            this.ShowZoneOutlinesCheckbox.Location = new System.Drawing.Point(24, 49);
+            this.ShowZoneOutlinesCheckbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ShowZoneOutlinesCheckbox.Name = "ShowZoneOutlinesCheckbox";
-            this.ShowZoneOutlinesCheckbox.Size = new System.Drawing.Size(122, 17);
+            this.ShowZoneOutlinesCheckbox.Size = new System.Drawing.Size(178, 24);
             this.ShowZoneOutlinesCheckbox.TabIndex = 56;
             this.ShowZoneOutlinesCheckbox.Text = "Show Zone Outlines";
             this.ShowZoneOutlinesCheckbox.UseVisualStyleBackColor = true;
             // 
             // GridSegmentSizeNumericUpDown
             // 
-            this.GridSegmentSizeNumericUpDown.Location = new System.Drawing.Point(123, 6);
+            this.GridSegmentSizeNumericUpDown.Location = new System.Drawing.Point(184, 9);
+            this.GridSegmentSizeNumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridSegmentSizeNumericUpDown.Maximum = new decimal(new int[] {
             50,
             0,
             0,
             0});
             this.GridSegmentSizeNumericUpDown.Name = "GridSegmentSizeNumericUpDown";
-            this.GridSegmentSizeNumericUpDown.Size = new System.Drawing.Size(49, 20);
+            this.GridSegmentSizeNumericUpDown.Size = new System.Drawing.Size(74, 26);
             this.GridSegmentSizeNumericUpDown.TabIndex = 53;
             // 
             // SegmentPaddingLabel
             // 
             this.SegmentPaddingLabel.AutoSize = true;
-            this.SegmentPaddingLabel.Location = new System.Drawing.Point(46, 9);
+            this.SegmentPaddingLabel.Location = new System.Drawing.Point(69, 14);
+            this.SegmentPaddingLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SegmentPaddingLabel.Name = "SegmentPaddingLabel";
-            this.SegmentPaddingLabel.Size = new System.Drawing.Size(74, 13);
+            this.SegmentPaddingLabel.Size = new System.Drawing.Size(108, 20);
             this.SegmentPaddingLabel.TabIndex = 51;
             this.SegmentPaddingLabel.Text = "Zone Padding";
             // 
             // GridSegmentSizeLabel
             // 
             this.GridSegmentSizeLabel.AutoSize = true;
-            this.GridSegmentSizeLabel.Location = new System.Drawing.Point(25, 9);
+            this.GridSegmentSizeLabel.Location = new System.Drawing.Point(38, 14);
+            this.GridSegmentSizeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.GridSegmentSizeLabel.Name = "GridSegmentSizeLabel";
-            this.GridSegmentSizeLabel.Size = new System.Drawing.Size(94, 13);
+            this.GridSegmentSizeLabel.Size = new System.Drawing.Size(143, 20);
             this.GridSegmentSizeLabel.TabIndex = 50;
             this.GridSegmentSizeLabel.Text = "Grid Segment Size";
             // 
@@ -1015,9 +1079,10 @@
             // 
             this.ShowGridLinesCheckbox.AutoSize = true;
             this.ShowGridLinesCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ShowGridLinesCheckbox.Location = new System.Drawing.Point(34, 32);
+            this.ShowGridLinesCheckbox.Location = new System.Drawing.Point(51, 49);
+            this.ShowGridLinesCheckbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ShowGridLinesCheckbox.Name = "ShowGridLinesCheckbox";
-            this.ShowGridLinesCheckbox.Size = new System.Drawing.Size(103, 17);
+            this.ShowGridLinesCheckbox.Size = new System.Drawing.Size(151, 24);
             this.ShowGridLinesCheckbox.TabIndex = 49;
             this.ShowGridLinesCheckbox.Text = "Show Grid Lines";
             this.ShowGridLinesCheckbox.UseVisualStyleBackColor = true;
@@ -1031,10 +1096,11 @@
             this.ColorsTabControl.Controls.Add(this.TransportTabPage);
             this.ColorsTabControl.Controls.Add(this.TerrainTabPage);
             this.ColorsTabControl.Controls.Add(this.BuildingTabPage);
-            this.ColorsTabControl.Location = new System.Drawing.Point(12, 19);
+            this.ColorsTabControl.Location = new System.Drawing.Point(18, 29);
+            this.ColorsTabControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ColorsTabControl.Name = "ColorsTabControl";
             this.ColorsTabControl.SelectedIndex = 0;
-            this.ColorsTabControl.Size = new System.Drawing.Size(277, 305);
+            this.ColorsTabControl.Size = new System.Drawing.Size(416, 469);
             this.ColorsTabControl.TabIndex = 2;
             // 
             // GridTabPage
@@ -1050,36 +1116,41 @@
             this.GridTabPage.Controls.Add(this.GridSegmentSizeLabel);
             this.GridTabPage.Controls.Add(this.GridSegmentSizeNumericUpDown);
             this.GridTabPage.Controls.Add(this.PixelLabel1);
-            this.GridTabPage.Location = new System.Drawing.Point(4, 22);
+            this.GridTabPage.Location = new System.Drawing.Point(4, 29);
+            this.GridTabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridTabPage.Name = "GridTabPage";
-            this.GridTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.GridTabPage.Size = new System.Drawing.Size(269, 279);
+            this.GridTabPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GridTabPage.Size = new System.Drawing.Size(408, 436);
             this.GridTabPage.TabIndex = 3;
             this.GridTabPage.Text = "Grid";
             this.GridTabPage.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(6, 55);
+            this.groupBox2.Location = new System.Drawing.Point(9, 85);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(266, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(399, 3);
             this.groupBox2.TabIndex = 72;
             this.groupBox2.TabStop = false;
             // 
             // GridLinesEditTextbox
             // 
-            this.GridLinesEditTextbox.Location = new System.Drawing.Point(228, 88);
+            this.GridLinesEditTextbox.Location = new System.Drawing.Point(342, 135);
+            this.GridLinesEditTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridLinesEditTextbox.Name = "GridLinesEditTextbox";
-            this.GridLinesEditTextbox.Size = new System.Drawing.Size(34, 23);
+            this.GridLinesEditTextbox.Size = new System.Drawing.Size(51, 35);
             this.GridLinesEditTextbox.TabIndex = 71;
             this.GridLinesEditTextbox.Text = "Edit";
             this.GridLinesEditTextbox.UseVisualStyleBackColor = true;
             // 
             // GridBackgroundEditButton
             // 
-            this.GridBackgroundEditButton.Location = new System.Drawing.Point(228, 65);
+            this.GridBackgroundEditButton.Location = new System.Drawing.Point(342, 100);
+            this.GridBackgroundEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridBackgroundEditButton.Name = "GridBackgroundEditButton";
-            this.GridBackgroundEditButton.Size = new System.Drawing.Size(34, 23);
+            this.GridBackgroundEditButton.Size = new System.Drawing.Size(51, 35);
             this.GridBackgroundEditButton.TabIndex = 67;
             this.GridBackgroundEditButton.Text = "Edit";
             this.GridBackgroundEditButton.UseVisualStyleBackColor = true;
@@ -1087,18 +1158,20 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 93);
+            this.label11.Location = new System.Drawing.Point(15, 143);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 13);
+            this.label11.Size = new System.Drawing.Size(81, 20);
             this.label11.TabIndex = 70;
             this.label11.Text = "Grid Lines";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(10, 70);
+            this.label10.Location = new System.Drawing.Point(15, 108);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 13);
+            this.label10.Size = new System.Drawing.Size(129, 20);
             this.label10.TabIndex = 69;
             this.label10.Text = "Grid Background";
             // 
@@ -1106,18 +1179,20 @@
             // 
             this.GridLinesTextbox.Enabled = false;
             this.GridLinesTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.GridLinesTextbox.Location = new System.Drawing.Point(138, 90);
+            this.GridLinesTextbox.Location = new System.Drawing.Point(207, 138);
+            this.GridLinesTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridLinesTextbox.Name = "GridLinesTextbox";
-            this.GridLinesTextbox.Size = new System.Drawing.Size(84, 20);
+            this.GridLinesTextbox.Size = new System.Drawing.Size(124, 26);
             this.GridLinesTextbox.TabIndex = 68;
             // 
             // GridBackgroundTextbox
             // 
             this.GridBackgroundTextbox.Enabled = false;
             this.GridBackgroundTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.GridBackgroundTextbox.Location = new System.Drawing.Point(138, 67);
+            this.GridBackgroundTextbox.Location = new System.Drawing.Point(207, 103);
+            this.GridBackgroundTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridBackgroundTextbox.Name = "GridBackgroundTextbox";
-            this.GridBackgroundTextbox.Size = new System.Drawing.Size(84, 20);
+            this.GridBackgroundTextbox.Size = new System.Drawing.Size(124, 26);
             this.GridBackgroundTextbox.TabIndex = 66;
             // 
             // ZonesTabPage
@@ -1173,63 +1248,71 @@
             this.ZonesTabPage.Controls.Add(this.PloppedBuildingsEditButton);
             this.ZonesTabPage.Controls.Add(this.label12);
             this.ZonesTabPage.Controls.Add(this.PloppedBuildingsTextbox);
-            this.ZonesTabPage.Location = new System.Drawing.Point(4, 22);
+            this.ZonesTabPage.Location = new System.Drawing.Point(4, 29);
+            this.ZonesTabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ZonesTabPage.Name = "ZonesTabPage";
-            this.ZonesTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ZonesTabPage.Size = new System.Drawing.Size(269, 279);
+            this.ZonesTabPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ZonesTabPage.Size = new System.Drawing.Size(408, 436);
             this.ZonesTabPage.TabIndex = 0;
             this.ZonesTabPage.Text = "Zones";
             this.ZonesTabPage.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
-            this.groupBox7.Location = new System.Drawing.Point(6, 53);
+            this.groupBox7.Location = new System.Drawing.Point(9, 82);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(241, 5);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox7.Size = new System.Drawing.Size(362, 8);
             this.groupBox7.TabIndex = 108;
             this.groupBox7.TabStop = false;
             // 
             // IndustrialZoneLowEditButton
             // 
-            this.IndustrialZoneLowEditButton.Location = new System.Drawing.Point(215, 341);
+            this.IndustrialZoneLowEditButton.Location = new System.Drawing.Point(322, 525);
+            this.IndustrialZoneLowEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IndustrialZoneLowEditButton.Name = "IndustrialZoneLowEditButton";
-            this.IndustrialZoneLowEditButton.Size = new System.Drawing.Size(34, 23);
+            this.IndustrialZoneLowEditButton.Size = new System.Drawing.Size(51, 35);
             this.IndustrialZoneLowEditButton.TabIndex = 107;
             this.IndustrialZoneLowEditButton.Text = "Edit";
             this.IndustrialZoneLowEditButton.UseVisualStyleBackColor = true;
             // 
             // IndustrialZoneMidEditButton
             // 
-            this.IndustrialZoneMidEditButton.Location = new System.Drawing.Point(215, 364);
+            this.IndustrialZoneMidEditButton.Location = new System.Drawing.Point(322, 560);
+            this.IndustrialZoneMidEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IndustrialZoneMidEditButton.Name = "IndustrialZoneMidEditButton";
-            this.IndustrialZoneMidEditButton.Size = new System.Drawing.Size(34, 23);
+            this.IndustrialZoneMidEditButton.Size = new System.Drawing.Size(51, 35);
             this.IndustrialZoneMidEditButton.TabIndex = 106;
             this.IndustrialZoneMidEditButton.Text = "Edit";
             this.IndustrialZoneMidEditButton.UseVisualStyleBackColor = true;
             // 
             // IndustrialZoneHighEditButton
             // 
-            this.IndustrialZoneHighEditButton.Location = new System.Drawing.Point(215, 387);
+            this.IndustrialZoneHighEditButton.Location = new System.Drawing.Point(322, 595);
+            this.IndustrialZoneHighEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IndustrialZoneHighEditButton.Name = "IndustrialZoneHighEditButton";
-            this.IndustrialZoneHighEditButton.Size = new System.Drawing.Size(34, 23);
+            this.IndustrialZoneHighEditButton.Size = new System.Drawing.Size(51, 35);
             this.IndustrialZoneHighEditButton.TabIndex = 105;
             this.IndustrialZoneHighEditButton.Text = "Edit";
             this.IndustrialZoneHighEditButton.UseVisualStyleBackColor = true;
             // 
             // CommercialZoneHighEditButton
             // 
-            this.CommercialZoneHighEditButton.Location = new System.Drawing.Point(215, 318);
+            this.CommercialZoneHighEditButton.Location = new System.Drawing.Point(322, 489);
+            this.CommercialZoneHighEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CommercialZoneHighEditButton.Name = "CommercialZoneHighEditButton";
-            this.CommercialZoneHighEditButton.Size = new System.Drawing.Size(34, 23);
+            this.CommercialZoneHighEditButton.Size = new System.Drawing.Size(51, 35);
             this.CommercialZoneHighEditButton.TabIndex = 94;
             this.CommercialZoneHighEditButton.Text = "Edit";
             this.CommercialZoneHighEditButton.UseVisualStyleBackColor = true;
             // 
             // CommercialZoneMidEditButton
             // 
-            this.CommercialZoneMidEditButton.Location = new System.Drawing.Point(215, 295);
+            this.CommercialZoneMidEditButton.Location = new System.Drawing.Point(322, 454);
+            this.CommercialZoneMidEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CommercialZoneMidEditButton.Name = "CommercialZoneMidEditButton";
-            this.CommercialZoneMidEditButton.Size = new System.Drawing.Size(34, 23);
+            this.CommercialZoneMidEditButton.Size = new System.Drawing.Size(51, 35);
             this.CommercialZoneMidEditButton.TabIndex = 96;
             this.CommercialZoneMidEditButton.Text = "Edit";
             this.CommercialZoneMidEditButton.UseVisualStyleBackColor = true;
@@ -1238,16 +1321,18 @@
             // 
             this.IndustrialZoneMidTextbox.Enabled = false;
             this.IndustrialZoneMidTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.IndustrialZoneMidTextbox.Location = new System.Drawing.Point(125, 366);
+            this.IndustrialZoneMidTextbox.Location = new System.Drawing.Point(188, 563);
+            this.IndustrialZoneMidTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IndustrialZoneMidTextbox.Name = "IndustrialZoneMidTextbox";
-            this.IndustrialZoneMidTextbox.Size = new System.Drawing.Size(84, 20);
+            this.IndustrialZoneMidTextbox.Size = new System.Drawing.Size(124, 26);
             this.IndustrialZoneMidTextbox.TabIndex = 104;
             // 
             // CommercialZoneLowEditButton
             // 
-            this.CommercialZoneLowEditButton.Location = new System.Drawing.Point(215, 272);
+            this.CommercialZoneLowEditButton.Location = new System.Drawing.Point(322, 418);
+            this.CommercialZoneLowEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CommercialZoneLowEditButton.Name = "CommercialZoneLowEditButton";
-            this.CommercialZoneLowEditButton.Size = new System.Drawing.Size(34, 23);
+            this.CommercialZoneLowEditButton.Size = new System.Drawing.Size(51, 35);
             this.CommercialZoneLowEditButton.TabIndex = 95;
             this.CommercialZoneLowEditButton.Text = "Edit";
             this.CommercialZoneLowEditButton.UseVisualStyleBackColor = true;
@@ -1256,82 +1341,91 @@
             // 
             this.IndustrialZoneHighTextbox.Enabled = false;
             this.IndustrialZoneHighTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.IndustrialZoneHighTextbox.Location = new System.Drawing.Point(125, 389);
+            this.IndustrialZoneHighTextbox.Location = new System.Drawing.Point(188, 598);
+            this.IndustrialZoneHighTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IndustrialZoneHighTextbox.Name = "IndustrialZoneHighTextbox";
-            this.IndustrialZoneHighTextbox.Size = new System.Drawing.Size(84, 20);
+            this.IndustrialZoneHighTextbox.Size = new System.Drawing.Size(124, 26);
             this.IndustrialZoneHighTextbox.TabIndex = 103;
             // 
             // CommercialZoneMidTextbox
             // 
             this.CommercialZoneMidTextbox.Enabled = false;
             this.CommercialZoneMidTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.CommercialZoneMidTextbox.Location = new System.Drawing.Point(125, 297);
+            this.CommercialZoneMidTextbox.Location = new System.Drawing.Point(188, 457);
+            this.CommercialZoneMidTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CommercialZoneMidTextbox.Name = "CommercialZoneMidTextbox";
-            this.CommercialZoneMidTextbox.Size = new System.Drawing.Size(84, 20);
+            this.CommercialZoneMidTextbox.Size = new System.Drawing.Size(124, 26);
             this.CommercialZoneMidTextbox.TabIndex = 102;
             // 
             // CommercialZoneHighTextbox
             // 
             this.CommercialZoneHighTextbox.Enabled = false;
             this.CommercialZoneHighTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.CommercialZoneHighTextbox.Location = new System.Drawing.Point(125, 320);
+            this.CommercialZoneHighTextbox.Location = new System.Drawing.Point(188, 492);
+            this.CommercialZoneHighTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CommercialZoneHighTextbox.Name = "CommercialZoneHighTextbox";
-            this.CommercialZoneHighTextbox.Size = new System.Drawing.Size(84, 20);
+            this.CommercialZoneHighTextbox.Size = new System.Drawing.Size(124, 26);
             this.CommercialZoneHighTextbox.TabIndex = 101;
             // 
             // IndustrialZoneLowTextbox
             // 
             this.IndustrialZoneLowTextbox.Enabled = false;
             this.IndustrialZoneLowTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.IndustrialZoneLowTextbox.Location = new System.Drawing.Point(125, 343);
+            this.IndustrialZoneLowTextbox.Location = new System.Drawing.Point(188, 528);
+            this.IndustrialZoneLowTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IndustrialZoneLowTextbox.Name = "IndustrialZoneLowTextbox";
-            this.IndustrialZoneLowTextbox.Size = new System.Drawing.Size(84, 20);
+            this.IndustrialZoneLowTextbox.Size = new System.Drawing.Size(124, 26);
             this.IndustrialZoneLowTextbox.TabIndex = 100;
             // 
             // CommercialZoneLowTextbox
             // 
             this.CommercialZoneLowTextbox.Enabled = false;
             this.CommercialZoneLowTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.CommercialZoneLowTextbox.Location = new System.Drawing.Point(125, 274);
+            this.CommercialZoneLowTextbox.Location = new System.Drawing.Point(188, 422);
+            this.CommercialZoneLowTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CommercialZoneLowTextbox.Name = "CommercialZoneLowTextbox";
-            this.CommercialZoneLowTextbox.Size = new System.Drawing.Size(84, 20);
+            this.CommercialZoneLowTextbox.Size = new System.Drawing.Size(124, 26);
             this.CommercialZoneLowTextbox.TabIndex = 99;
             // 
             // ResidentialZoneLowEditButton
             // 
-            this.ResidentialZoneLowEditButton.Location = new System.Drawing.Point(215, 203);
+            this.ResidentialZoneLowEditButton.Location = new System.Drawing.Point(322, 312);
+            this.ResidentialZoneLowEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResidentialZoneLowEditButton.Name = "ResidentialZoneLowEditButton";
-            this.ResidentialZoneLowEditButton.Size = new System.Drawing.Size(34, 23);
+            this.ResidentialZoneLowEditButton.Size = new System.Drawing.Size(51, 35);
             this.ResidentialZoneLowEditButton.TabIndex = 98;
             this.ResidentialZoneLowEditButton.Text = "Edit";
             this.ResidentialZoneLowEditButton.UseVisualStyleBackColor = true;
             // 
             // SegmentPaddingNumericUpDown
             // 
-            this.SegmentPaddingNumericUpDown.Location = new System.Drawing.Point(123, 6);
+            this.SegmentPaddingNumericUpDown.Location = new System.Drawing.Point(184, 9);
+            this.SegmentPaddingNumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SegmentPaddingNumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.SegmentPaddingNumericUpDown.Name = "SegmentPaddingNumericUpDown";
-            this.SegmentPaddingNumericUpDown.Size = new System.Drawing.Size(49, 20);
+            this.SegmentPaddingNumericUpDown.Size = new System.Drawing.Size(74, 26);
             this.SegmentPaddingNumericUpDown.TabIndex = 54;
             // 
             // ResidentialZoneHighEditButton
             // 
-            this.ResidentialZoneHighEditButton.Location = new System.Drawing.Point(215, 249);
+            this.ResidentialZoneHighEditButton.Location = new System.Drawing.Point(322, 383);
+            this.ResidentialZoneHighEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResidentialZoneHighEditButton.Name = "ResidentialZoneHighEditButton";
-            this.ResidentialZoneHighEditButton.Size = new System.Drawing.Size(34, 23);
+            this.ResidentialZoneHighEditButton.Size = new System.Drawing.Size(51, 35);
             this.ResidentialZoneHighEditButton.TabIndex = 97;
             this.ResidentialZoneHighEditButton.Text = "Edit";
             this.ResidentialZoneHighEditButton.UseVisualStyleBackColor = true;
             // 
             // ResidentialZoneMidEditButton
             // 
-            this.ResidentialZoneMidEditButton.Location = new System.Drawing.Point(215, 226);
+            this.ResidentialZoneMidEditButton.Location = new System.Drawing.Point(322, 348);
+            this.ResidentialZoneMidEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResidentialZoneMidEditButton.Name = "ResidentialZoneMidEditButton";
-            this.ResidentialZoneMidEditButton.Size = new System.Drawing.Size(34, 23);
+            this.ResidentialZoneMidEditButton.Size = new System.Drawing.Size(51, 35);
             this.ResidentialZoneMidEditButton.TabIndex = 93;
             this.ResidentialZoneMidEditButton.Text = "Edit";
             this.ResidentialZoneMidEditButton.UseVisualStyleBackColor = true;
@@ -1339,72 +1433,80 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 369);
+            this.label7.Location = new System.Drawing.Point(15, 568);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 13);
+            this.label7.Size = new System.Drawing.Size(144, 20);
             this.label7.TabIndex = 92;
             this.label7.Text = "Industrial Zone Mid";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 392);
+            this.label8.Location = new System.Drawing.Point(15, 603);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 13);
+            this.label8.Size = new System.Drawing.Size(152, 20);
             this.label8.TabIndex = 91;
             this.label8.Text = "Industrial Zone High";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 346);
+            this.label9.Location = new System.Drawing.Point(15, 532);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 13);
+            this.label9.Size = new System.Drawing.Size(148, 20);
             this.label9.TabIndex = 90;
             this.label9.Text = "Industrial Zone Low";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 300);
+            this.label6.Location = new System.Drawing.Point(15, 462);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 13);
+            this.label6.Size = new System.Drawing.Size(162, 20);
             this.label6.TabIndex = 89;
             this.label6.Text = "Commercial Zone Mid";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 323);
+            this.label5.Location = new System.Drawing.Point(15, 497);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 13);
+            this.label5.Size = new System.Drawing.Size(170, 20);
             this.label5.TabIndex = 88;
             this.label5.Text = "Commercial Zone High";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 231);
+            this.label4.Location = new System.Drawing.Point(15, 355);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 13);
+            this.label4.Size = new System.Drawing.Size(158, 20);
             this.label4.TabIndex = 87;
             this.label4.Text = "Residential Zone Mid";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(10, 254);
+            this.label13.Location = new System.Drawing.Point(15, 391);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(112, 13);
+            this.label13.Size = new System.Drawing.Size(166, 20);
             this.label13.TabIndex = 86;
             this.label13.Text = "Residential Zone High";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(10, 277);
+            this.label14.Location = new System.Drawing.Point(15, 426);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(112, 13);
+            this.label14.Size = new System.Drawing.Size(166, 20);
             this.label14.TabIndex = 85;
             this.label14.Text = "Commercial Zone Low";
             // 
@@ -1412,43 +1514,48 @@
             // 
             this.ResidentialZoneHighTextbox.Enabled = false;
             this.ResidentialZoneHighTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.ResidentialZoneHighTextbox.Location = new System.Drawing.Point(125, 251);
+            this.ResidentialZoneHighTextbox.Location = new System.Drawing.Point(188, 386);
+            this.ResidentialZoneHighTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResidentialZoneHighTextbox.Name = "ResidentialZoneHighTextbox";
-            this.ResidentialZoneHighTextbox.Size = new System.Drawing.Size(84, 20);
+            this.ResidentialZoneHighTextbox.Size = new System.Drawing.Size(124, 26);
             this.ResidentialZoneHighTextbox.TabIndex = 84;
             // 
             // ResidentialZoneMidTextbox
             // 
             this.ResidentialZoneMidTextbox.Enabled = false;
             this.ResidentialZoneMidTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.ResidentialZoneMidTextbox.Location = new System.Drawing.Point(125, 228);
+            this.ResidentialZoneMidTextbox.Location = new System.Drawing.Point(188, 351);
+            this.ResidentialZoneMidTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResidentialZoneMidTextbox.Name = "ResidentialZoneMidTextbox";
-            this.ResidentialZoneMidTextbox.Size = new System.Drawing.Size(84, 20);
+            this.ResidentialZoneMidTextbox.Size = new System.Drawing.Size(124, 26);
             this.ResidentialZoneMidTextbox.TabIndex = 83;
             // 
             // ResidentialZoneLowTextbox
             // 
             this.ResidentialZoneLowTextbox.Enabled = false;
             this.ResidentialZoneLowTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.ResidentialZoneLowTextbox.Location = new System.Drawing.Point(125, 205);
+            this.ResidentialZoneLowTextbox.Location = new System.Drawing.Point(188, 315);
+            this.ResidentialZoneLowTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResidentialZoneLowTextbox.Name = "ResidentialZoneLowTextbox";
-            this.ResidentialZoneLowTextbox.Size = new System.Drawing.Size(84, 20);
+            this.ResidentialZoneLowTextbox.Size = new System.Drawing.Size(124, 26);
             this.ResidentialZoneLowTextbox.TabIndex = 82;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(10, 208);
+            this.label15.Location = new System.Drawing.Point(15, 320);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(110, 13);
+            this.label15.Size = new System.Drawing.Size(162, 20);
             this.label15.TabIndex = 81;
             this.label15.Text = "Residential Zone Low";
             // 
             // SpaceportEditButton
             // 
-            this.SpaceportEditButton.Location = new System.Drawing.Point(215, 180);
+            this.SpaceportEditButton.Location = new System.Drawing.Point(322, 277);
+            this.SpaceportEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SpaceportEditButton.Name = "SpaceportEditButton";
-            this.SpaceportEditButton.Size = new System.Drawing.Size(34, 23);
+            this.SpaceportEditButton.Size = new System.Drawing.Size(51, 35);
             this.SpaceportEditButton.TabIndex = 80;
             this.SpaceportEditButton.Text = "Edit";
             this.SpaceportEditButton.UseVisualStyleBackColor = true;
@@ -1456,9 +1563,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 185);
+            this.label1.Location = new System.Drawing.Point(15, 285);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 79;
             this.label1.Text = "Spaceports";
             // 
@@ -1466,16 +1574,18 @@
             // 
             this.SpaceportTextbox.Enabled = false;
             this.SpaceportTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.SpaceportTextbox.Location = new System.Drawing.Point(125, 182);
+            this.SpaceportTextbox.Location = new System.Drawing.Point(188, 280);
+            this.SpaceportTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SpaceportTextbox.Name = "SpaceportTextbox";
-            this.SpaceportTextbox.Size = new System.Drawing.Size(84, 20);
+            this.SpaceportTextbox.Size = new System.Drawing.Size(124, 26);
             this.SpaceportTextbox.TabIndex = 78;
             // 
             // SeaportsEditButton
             // 
-            this.SeaportsEditButton.Location = new System.Drawing.Point(215, 157);
+            this.SeaportsEditButton.Location = new System.Drawing.Point(322, 242);
+            this.SeaportsEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SeaportsEditButton.Name = "SeaportsEditButton";
-            this.SeaportsEditButton.Size = new System.Drawing.Size(34, 23);
+            this.SeaportsEditButton.Size = new System.Drawing.Size(51, 35);
             this.SeaportsEditButton.TabIndex = 77;
             this.SeaportsEditButton.Text = "Edit";
             this.SeaportsEditButton.UseVisualStyleBackColor = true;
@@ -1483,9 +1593,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 162);
+            this.label2.Location = new System.Drawing.Point(15, 249);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(74, 20);
             this.label2.TabIndex = 76;
             this.label2.Text = "Seaports";
             // 
@@ -1493,16 +1604,18 @@
             // 
             this.SeaportTextbox.Enabled = false;
             this.SeaportTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.SeaportTextbox.Location = new System.Drawing.Point(125, 159);
+            this.SeaportTextbox.Location = new System.Drawing.Point(188, 245);
+            this.SeaportTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SeaportTextbox.Name = "SeaportTextbox";
-            this.SeaportTextbox.Size = new System.Drawing.Size(84, 20);
+            this.SeaportTextbox.Size = new System.Drawing.Size(124, 26);
             this.SeaportTextbox.TabIndex = 75;
             // 
             // AirportsEditButton
             // 
-            this.AirportsEditButton.Location = new System.Drawing.Point(215, 134);
+            this.AirportsEditButton.Location = new System.Drawing.Point(322, 206);
+            this.AirportsEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AirportsEditButton.Name = "AirportsEditButton";
-            this.AirportsEditButton.Size = new System.Drawing.Size(34, 23);
+            this.AirportsEditButton.Size = new System.Drawing.Size(51, 35);
             this.AirportsEditButton.TabIndex = 74;
             this.AirportsEditButton.Text = "Edit";
             this.AirportsEditButton.UseVisualStyleBackColor = true;
@@ -1510,9 +1623,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 139);
+            this.label3.Location = new System.Drawing.Point(15, 214);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(64, 20);
             this.label3.TabIndex = 73;
             this.label3.Text = "Airports";
             // 
@@ -1520,16 +1634,18 @@
             // 
             this.AirportsTextbox.Enabled = false;
             this.AirportsTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.AirportsTextbox.Location = new System.Drawing.Point(125, 136);
+            this.AirportsTextbox.Location = new System.Drawing.Point(188, 209);
+            this.AirportsTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AirportsTextbox.Name = "AirportsTextbox";
-            this.AirportsTextbox.Size = new System.Drawing.Size(84, 20);
+            this.AirportsTextbox.Size = new System.Drawing.Size(124, 26);
             this.AirportsTextbox.TabIndex = 72;
             // 
             // MilitaryEditButton
             // 
-            this.MilitaryEditButton.Location = new System.Drawing.Point(215, 111);
+            this.MilitaryEditButton.Location = new System.Drawing.Point(322, 171);
+            this.MilitaryEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MilitaryEditButton.Name = "MilitaryEditButton";
-            this.MilitaryEditButton.Size = new System.Drawing.Size(34, 23);
+            this.MilitaryEditButton.Size = new System.Drawing.Size(51, 35);
             this.MilitaryEditButton.TabIndex = 71;
             this.MilitaryEditButton.Text = "Edit";
             this.MilitaryEditButton.UseVisualStyleBackColor = true;
@@ -1537,9 +1653,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(10, 116);
+            this.label17.Location = new System.Drawing.Point(15, 178);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 13);
+            this.label17.Size = new System.Drawing.Size(57, 20);
             this.label17.TabIndex = 70;
             this.label17.Text = "Military";
             // 
@@ -1547,16 +1664,18 @@
             // 
             this.MilitaryTextbox.Enabled = false;
             this.MilitaryTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.MilitaryTextbox.Location = new System.Drawing.Point(125, 113);
+            this.MilitaryTextbox.Location = new System.Drawing.Point(188, 174);
+            this.MilitaryTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MilitaryTextbox.Name = "MilitaryTextbox";
-            this.MilitaryTextbox.Size = new System.Drawing.Size(84, 20);
+            this.MilitaryTextbox.Size = new System.Drawing.Size(124, 26);
             this.MilitaryTextbox.TabIndex = 69;
             // 
             // ZoneOutlinesEditButton
             // 
-            this.ZoneOutlinesEditButton.Location = new System.Drawing.Point(215, 65);
+            this.ZoneOutlinesEditButton.Location = new System.Drawing.Point(322, 100);
+            this.ZoneOutlinesEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ZoneOutlinesEditButton.Name = "ZoneOutlinesEditButton";
-            this.ZoneOutlinesEditButton.Size = new System.Drawing.Size(34, 23);
+            this.ZoneOutlinesEditButton.Size = new System.Drawing.Size(51, 35);
             this.ZoneOutlinesEditButton.TabIndex = 68;
             this.ZoneOutlinesEditButton.Text = "Edit";
             this.ZoneOutlinesEditButton.UseVisualStyleBackColor = true;
@@ -1564,9 +1683,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(10, 70);
+            this.label16.Location = new System.Drawing.Point(15, 108);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 13);
+            this.label16.Size = new System.Drawing.Size(100, 20);
             this.label16.TabIndex = 67;
             this.label16.Text = "Zone Outline";
             // 
@@ -1574,16 +1694,18 @@
             // 
             this.ZoneOutlinesTextbox.Enabled = false;
             this.ZoneOutlinesTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.ZoneOutlinesTextbox.Location = new System.Drawing.Point(125, 67);
+            this.ZoneOutlinesTextbox.Location = new System.Drawing.Point(188, 103);
+            this.ZoneOutlinesTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ZoneOutlinesTextbox.Name = "ZoneOutlinesTextbox";
-            this.ZoneOutlinesTextbox.Size = new System.Drawing.Size(84, 20);
+            this.ZoneOutlinesTextbox.Size = new System.Drawing.Size(124, 26);
             this.ZoneOutlinesTextbox.TabIndex = 66;
             // 
             // PloppedBuildingsEditButton
             // 
-            this.PloppedBuildingsEditButton.Location = new System.Drawing.Point(215, 88);
+            this.PloppedBuildingsEditButton.Location = new System.Drawing.Point(322, 135);
+            this.PloppedBuildingsEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PloppedBuildingsEditButton.Name = "PloppedBuildingsEditButton";
-            this.PloppedBuildingsEditButton.Size = new System.Drawing.Size(34, 23);
+            this.PloppedBuildingsEditButton.Size = new System.Drawing.Size(51, 35);
             this.PloppedBuildingsEditButton.TabIndex = 64;
             this.PloppedBuildingsEditButton.Text = "Edit";
             this.PloppedBuildingsEditButton.UseVisualStyleBackColor = true;
@@ -1591,9 +1713,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 93);
+            this.label12.Location = new System.Drawing.Point(15, 143);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 13);
+            this.label12.Size = new System.Drawing.Size(135, 20);
             this.label12.TabIndex = 63;
             this.label12.Text = "Plopped Buildings";
             // 
@@ -1601,14 +1724,27 @@
             // 
             this.PloppedBuildingsTextbox.Enabled = false;
             this.PloppedBuildingsTextbox.ForeColor = System.Drawing.Color.Maroon;
-            this.PloppedBuildingsTextbox.Location = new System.Drawing.Point(125, 90);
+            this.PloppedBuildingsTextbox.Location = new System.Drawing.Point(188, 138);
+            this.PloppedBuildingsTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PloppedBuildingsTextbox.Name = "PloppedBuildingsTextbox";
-            this.PloppedBuildingsTextbox.Size = new System.Drawing.Size(84, 20);
+            this.PloppedBuildingsTextbox.Size = new System.Drawing.Size(124, 26);
             this.PloppedBuildingsTextbox.TabIndex = 60;
             // 
             // TransportTabPage
             // 
             this.TransportTabPage.AutoScroll = true;
+            this.TransportTabPage.Controls.Add(this.MonorailEditButton);
+            this.TransportTabPage.Controls.Add(this.label26);
+            this.TransportTabPage.Controls.Add(this.MonorailTextBox);
+            this.TransportTabPage.Controls.Add(this.LightRailEditButton);
+            this.TransportTabPage.Controls.Add(this.label25);
+            this.TransportTabPage.Controls.Add(this.LightRailTextBox);
+            this.TransportTabPage.Controls.Add(this.DirtRoadEditButton);
+            this.TransportTabPage.Controls.Add(this.label24);
+            this.TransportTabPage.Controls.Add(this.DirtRoadTextBox);
+            this.TransportTabPage.Controls.Add(this.HighwayEditButton);
+            this.TransportTabPage.Controls.Add(this.label23);
+            this.TransportTabPage.Controls.Add(this.HighwayTextBox);
             this.TransportTabPage.Controls.Add(this.SubwayEditButton);
             this.TransportTabPage.Controls.Add(this.label45);
             this.TransportTabPage.Controls.Add(this.SubwayTextBox);
@@ -1627,19 +1763,81 @@
             this.TransportTabPage.Controls.Add(this.StreetEditButton);
             this.TransportTabPage.Controls.Add(this.label30);
             this.TransportTabPage.Controls.Add(this.StreetTextBox);
-            this.TransportTabPage.Location = new System.Drawing.Point(4, 22);
+            this.TransportTabPage.Location = new System.Drawing.Point(4, 29);
+            this.TransportTabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TransportTabPage.Name = "TransportTabPage";
-            this.TransportTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.TransportTabPage.Size = new System.Drawing.Size(269, 279);
+            this.TransportTabPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TransportTabPage.Size = new System.Drawing.Size(408, 436);
             this.TransportTabPage.TabIndex = 2;
             this.TransportTabPage.Text = "Transport";
             this.TransportTabPage.UseVisualStyleBackColor = true;
             // 
+            // DirtRoadEditButton
+            // 
+            this.DirtRoadEditButton.Location = new System.Drawing.Point(333, 335);
+            this.DirtRoadEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DirtRoadEditButton.Name = "DirtRoadEditButton";
+            this.DirtRoadEditButton.Size = new System.Drawing.Size(51, 35);
+            this.DirtRoadEditButton.TabIndex = 84;
+            this.DirtRoadEditButton.Text = "Edit";
+            this.DirtRoadEditButton.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(9, 344);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(128, 20);
+            this.label24.TabIndex = 85;
+            this.label24.Text = "Dirt Road / RHW";
+            // 
+            // DirtRoadTextBox
+            // 
+            this.DirtRoadTextBox.Enabled = false;
+            this.DirtRoadTextBox.ForeColor = System.Drawing.Color.Green;
+            this.DirtRoadTextBox.Location = new System.Drawing.Point(198, 338);
+            this.DirtRoadTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DirtRoadTextBox.Name = "DirtRoadTextBox";
+            this.DirtRoadTextBox.Size = new System.Drawing.Size(124, 26);
+            this.DirtRoadTextBox.TabIndex = 83;
+            // 
+            // HighwayEditButton
+            // 
+            this.HighwayEditButton.Location = new System.Drawing.Point(333, 297);
+            this.HighwayEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.HighwayEditButton.Name = "HighwayEditButton";
+            this.HighwayEditButton.Size = new System.Drawing.Size(51, 35);
+            this.HighwayEditButton.TabIndex = 81;
+            this.HighwayEditButton.Text = "Edit";
+            this.HighwayEditButton.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(9, 306);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(113, 20);
+            this.label23.TabIndex = 82;
+            this.label23.Text = "Maxis Highway";
+            // 
+            // HighwayTextBox
+            // 
+            this.HighwayTextBox.Enabled = false;
+            this.HighwayTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.HighwayTextBox.Location = new System.Drawing.Point(198, 300);
+            this.HighwayTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.HighwayTextBox.Name = "HighwayTextBox";
+            this.HighwayTextBox.Size = new System.Drawing.Size(124, 26);
+            this.HighwayTextBox.TabIndex = 80;
+            // 
             // SubwayEditButton
             // 
-            this.SubwayEditButton.Location = new System.Drawing.Point(222, 121);
+            this.SubwayEditButton.Location = new System.Drawing.Point(333, 186);
+            this.SubwayEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SubwayEditButton.Name = "SubwayEditButton";
-            this.SubwayEditButton.Size = new System.Drawing.Size(34, 23);
+            this.SubwayEditButton.Size = new System.Drawing.Size(51, 35);
             this.SubwayEditButton.TabIndex = 78;
             this.SubwayEditButton.Text = "Edit";
             this.SubwayEditButton.UseVisualStyleBackColor = true;
@@ -1647,9 +1845,10 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(6, 127);
+            this.label45.Location = new System.Drawing.Point(9, 195);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(45, 13);
+            this.label45.Size = new System.Drawing.Size(65, 20);
             this.label45.TabIndex = 79;
             this.label45.Text = "Subway";
             // 
@@ -1657,16 +1856,18 @@
             // 
             this.SubwayTextBox.Enabled = false;
             this.SubwayTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.SubwayTextBox.Location = new System.Drawing.Point(132, 123);
+            this.SubwayTextBox.Location = new System.Drawing.Point(198, 189);
+            this.SubwayTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SubwayTextBox.Name = "SubwayTextBox";
-            this.SubwayTextBox.Size = new System.Drawing.Size(84, 20);
+            this.SubwayTextBox.Size = new System.Drawing.Size(124, 26);
             this.SubwayTextBox.TabIndex = 77;
             // 
             // RailwayEditButton
             // 
-            this.RailwayEditButton.Location = new System.Drawing.Point(222, 98);
+            this.RailwayEditButton.Location = new System.Drawing.Point(333, 151);
+            this.RailwayEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RailwayEditButton.Name = "RailwayEditButton";
-            this.RailwayEditButton.Size = new System.Drawing.Size(34, 23);
+            this.RailwayEditButton.Size = new System.Drawing.Size(51, 35);
             this.RailwayEditButton.TabIndex = 75;
             this.RailwayEditButton.Text = "Edit";
             this.RailwayEditButton.UseVisualStyleBackColor = true;
@@ -1674,9 +1875,10 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(6, 103);
+            this.label44.Location = new System.Drawing.Point(9, 158);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(44, 13);
+            this.label44.Size = new System.Drawing.Size(63, 20);
             this.label44.TabIndex = 76;
             this.label44.Text = "Railway";
             // 
@@ -1684,16 +1886,18 @@
             // 
             this.RailwayTextBox.Enabled = false;
             this.RailwayTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.RailwayTextBox.Location = new System.Drawing.Point(132, 100);
+            this.RailwayTextBox.Location = new System.Drawing.Point(198, 154);
+            this.RailwayTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RailwayTextBox.Name = "RailwayTextBox";
-            this.RailwayTextBox.Size = new System.Drawing.Size(84, 20);
+            this.RailwayTextBox.Size = new System.Drawing.Size(124, 26);
             this.RailwayTextBox.TabIndex = 74;
             // 
             // AvenueEditButton
             // 
-            this.AvenueEditButton.Location = new System.Drawing.Point(222, 75);
+            this.AvenueEditButton.Location = new System.Drawing.Point(333, 115);
+            this.AvenueEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AvenueEditButton.Name = "AvenueEditButton";
-            this.AvenueEditButton.Size = new System.Drawing.Size(34, 23);
+            this.AvenueEditButton.Size = new System.Drawing.Size(51, 35);
             this.AvenueEditButton.TabIndex = 72;
             this.AvenueEditButton.Text = "Edit";
             this.AvenueEditButton.UseVisualStyleBackColor = true;
@@ -1701,9 +1905,10 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(6, 80);
+            this.label43.Location = new System.Drawing.Point(9, 123);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(44, 13);
+            this.label43.Size = new System.Drawing.Size(63, 20);
             this.label43.TabIndex = 73;
             this.label43.Text = "Avenue";
             // 
@@ -1711,16 +1916,18 @@
             // 
             this.AvenueTextBox.Enabled = false;
             this.AvenueTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.AvenueTextBox.Location = new System.Drawing.Point(132, 77);
+            this.AvenueTextBox.Location = new System.Drawing.Point(198, 118);
+            this.AvenueTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AvenueTextBox.Name = "AvenueTextBox";
-            this.AvenueTextBox.Size = new System.Drawing.Size(84, 20);
+            this.AvenueTextBox.Size = new System.Drawing.Size(124, 26);
             this.AvenueTextBox.TabIndex = 71;
             // 
             // OneWayRoadEditButton
             // 
-            this.OneWayRoadEditButton.Location = new System.Drawing.Point(222, 52);
+            this.OneWayRoadEditButton.Location = new System.Drawing.Point(333, 80);
+            this.OneWayRoadEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OneWayRoadEditButton.Name = "OneWayRoadEditButton";
-            this.OneWayRoadEditButton.Size = new System.Drawing.Size(34, 23);
+            this.OneWayRoadEditButton.Size = new System.Drawing.Size(51, 35);
             this.OneWayRoadEditButton.TabIndex = 69;
             this.OneWayRoadEditButton.Text = "Edit";
             this.OneWayRoadEditButton.UseVisualStyleBackColor = true;
@@ -1728,9 +1935,10 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(6, 57);
+            this.label42.Location = new System.Drawing.Point(9, 88);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(81, 13);
+            this.label42.Size = new System.Drawing.Size(117, 20);
             this.label42.TabIndex = 70;
             this.label42.Text = "One Way Road";
             // 
@@ -1738,16 +1946,18 @@
             // 
             this.OneWayRoadTextBox.Enabled = false;
             this.OneWayRoadTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.OneWayRoadTextBox.Location = new System.Drawing.Point(132, 54);
+            this.OneWayRoadTextBox.Location = new System.Drawing.Point(198, 83);
+            this.OneWayRoadTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OneWayRoadTextBox.Name = "OneWayRoadTextBox";
-            this.OneWayRoadTextBox.Size = new System.Drawing.Size(84, 20);
+            this.OneWayRoadTextBox.Size = new System.Drawing.Size(124, 26);
             this.OneWayRoadTextBox.TabIndex = 68;
             // 
             // RoadEditButton
             // 
-            this.RoadEditButton.Location = new System.Drawing.Point(222, 29);
+            this.RoadEditButton.Location = new System.Drawing.Point(333, 45);
+            this.RoadEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RoadEditButton.Name = "RoadEditButton";
-            this.RoadEditButton.Size = new System.Drawing.Size(34, 23);
+            this.RoadEditButton.Size = new System.Drawing.Size(51, 35);
             this.RoadEditButton.TabIndex = 66;
             this.RoadEditButton.Text = "Edit";
             this.RoadEditButton.UseVisualStyleBackColor = true;
@@ -1755,9 +1965,10 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(6, 11);
+            this.label41.Location = new System.Drawing.Point(9, 17);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(35, 13);
+            this.label41.Size = new System.Drawing.Size(53, 20);
             this.label41.TabIndex = 67;
             this.label41.Text = "Street";
             // 
@@ -1765,16 +1976,18 @@
             // 
             this.RoadTextBox.Enabled = false;
             this.RoadTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.RoadTextBox.Location = new System.Drawing.Point(132, 31);
+            this.RoadTextBox.Location = new System.Drawing.Point(198, 48);
+            this.RoadTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RoadTextBox.Name = "RoadTextBox";
-            this.RoadTextBox.Size = new System.Drawing.Size(84, 20);
+            this.RoadTextBox.Size = new System.Drawing.Size(124, 26);
             this.RoadTextBox.TabIndex = 65;
             // 
             // StreetEditButton
             // 
-            this.StreetEditButton.Location = new System.Drawing.Point(222, 6);
+            this.StreetEditButton.Location = new System.Drawing.Point(333, 9);
+            this.StreetEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.StreetEditButton.Name = "StreetEditButton";
-            this.StreetEditButton.Size = new System.Drawing.Size(34, 23);
+            this.StreetEditButton.Size = new System.Drawing.Size(51, 35);
             this.StreetEditButton.TabIndex = 63;
             this.StreetEditButton.Text = "Edit";
             this.StreetEditButton.UseVisualStyleBackColor = true;
@@ -1782,9 +1995,10 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 34);
+            this.label30.Location = new System.Drawing.Point(9, 52);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(33, 13);
+            this.label30.Size = new System.Drawing.Size(48, 20);
             this.label30.TabIndex = 64;
             this.label30.Text = "Road";
             // 
@@ -1792,9 +2006,10 @@
             // 
             this.StreetTextBox.Enabled = false;
             this.StreetTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.StreetTextBox.Location = new System.Drawing.Point(132, 8);
+            this.StreetTextBox.Location = new System.Drawing.Point(198, 12);
+            this.StreetTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.StreetTextBox.Name = "StreetTextBox";
-            this.StreetTextBox.Size = new System.Drawing.Size(84, 20);
+            this.StreetTextBox.Size = new System.Drawing.Size(124, 26);
             this.StreetTextBox.TabIndex = 62;
             // 
             // TerrainTabPage
@@ -1917,45 +2132,51 @@
             this.TerrainTabPage.Controls.Add(this.TerrainLayer1Button);
             this.TerrainTabPage.Controls.Add(this.TerrainLayer1ColorTextBox);
             this.TerrainTabPage.Controls.Add(this.TerrainLayer1NumericUpDown);
-            this.TerrainTabPage.Location = new System.Drawing.Point(4, 22);
+            this.TerrainTabPage.Location = new System.Drawing.Point(4, 29);
+            this.TerrainTabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainTabPage.Name = "TerrainTabPage";
-            this.TerrainTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.TerrainTabPage.Size = new System.Drawing.Size(269, 279);
+            this.TerrainTabPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TerrainTabPage.Size = new System.Drawing.Size(408, 436);
             this.TerrainTabPage.TabIndex = 1;
             this.TerrainTabPage.Text = "Terrain";
             this.TerrainTabPage.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Location = new System.Drawing.Point(6, 30);
+            this.groupBox4.Location = new System.Drawing.Point(9, 46);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(238, 5);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Size = new System.Drawing.Size(357, 8);
             this.groupBox4.TabIndex = 212;
             this.groupBox4.TabStop = false;
             // 
             // TerrainLayer23CheckBox
             // 
             this.TerrainLayer23CheckBox.AutoSize = true;
-            this.TerrainLayer23CheckBox.Location = new System.Drawing.Point(6, 615);
+            this.TerrainLayer23CheckBox.Location = new System.Drawing.Point(9, 946);
+            this.TerrainLayer23CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer23CheckBox.Name = "TerrainLayer23CheckBox";
-            this.TerrainLayer23CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer23CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer23CheckBox.TabIndex = 211;
             this.TerrainLayer23CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer23AliasTextBox
             // 
-            this.TerrainLayer23AliasTextBox.Location = new System.Drawing.Point(22, 612);
+            this.TerrainLayer23AliasTextBox.Location = new System.Drawing.Point(33, 942);
+            this.TerrainLayer23AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer23AliasTextBox.Name = "TerrainLayer23AliasTextBox";
-            this.TerrainLayer23AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer23AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer23AliasTextBox.TabIndex = 210;
             this.TerrainLayer23AliasTextBox.Text = "water deep";
             this.TerrainLayer23AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer23Button
             // 
-            this.TerrainLayer23Button.Location = new System.Drawing.Point(215, 610);
+            this.TerrainLayer23Button.Location = new System.Drawing.Point(322, 938);
+            this.TerrainLayer23Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer23Button.Name = "TerrainLayer23Button";
-            this.TerrainLayer23Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer23Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer23Button.TabIndex = 209;
             this.TerrainLayer23Button.Text = "Edit";
             this.TerrainLayer23Button.UseVisualStyleBackColor = true;
@@ -1964,14 +2185,16 @@
             // 
             this.TerrainLayer23ColorTextBox.Enabled = false;
             this.TerrainLayer23ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer23ColorTextBox.Location = new System.Drawing.Point(157, 612);
+            this.TerrainLayer23ColorTextBox.Location = new System.Drawing.Point(236, 942);
+            this.TerrainLayer23ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer23ColorTextBox.Name = "TerrainLayer23ColorTextBox";
-            this.TerrainLayer23ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer23ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer23ColorTextBox.TabIndex = 208;
             // 
             // TerrainLayer23NumericUpDown
             // 
-            this.TerrainLayer23NumericUpDown.Location = new System.Drawing.Point(100, 612);
+            this.TerrainLayer23NumericUpDown.Location = new System.Drawing.Point(150, 942);
+            this.TerrainLayer23NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer23NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -1983,7 +2206,7 @@
             0,
             0});
             this.TerrainLayer23NumericUpDown.Name = "TerrainLayer23NumericUpDown";
-            this.TerrainLayer23NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer23NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer23NumericUpDown.TabIndex = 207;
             this.TerrainLayer23NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -1994,26 +2217,29 @@
             // TerrainLayer22CheckBox
             // 
             this.TerrainLayer22CheckBox.AutoSize = true;
-            this.TerrainLayer22CheckBox.Location = new System.Drawing.Point(6, 589);
+            this.TerrainLayer22CheckBox.Location = new System.Drawing.Point(9, 906);
+            this.TerrainLayer22CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer22CheckBox.Name = "TerrainLayer22CheckBox";
-            this.TerrainLayer22CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer22CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer22CheckBox.TabIndex = 206;
             this.TerrainLayer22CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer22AliasTextBox
             // 
-            this.TerrainLayer22AliasTextBox.Location = new System.Drawing.Point(22, 586);
+            this.TerrainLayer22AliasTextBox.Location = new System.Drawing.Point(33, 902);
+            this.TerrainLayer22AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer22AliasTextBox.Name = "TerrainLayer22AliasTextBox";
-            this.TerrainLayer22AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer22AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer22AliasTextBox.TabIndex = 205;
             this.TerrainLayer22AliasTextBox.Text = "water deep";
             this.TerrainLayer22AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer22Button
             // 
-            this.TerrainLayer22Button.Location = new System.Drawing.Point(215, 584);
+            this.TerrainLayer22Button.Location = new System.Drawing.Point(322, 898);
+            this.TerrainLayer22Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer22Button.Name = "TerrainLayer22Button";
-            this.TerrainLayer22Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer22Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer22Button.TabIndex = 204;
             this.TerrainLayer22Button.Text = "Edit";
             this.TerrainLayer22Button.UseVisualStyleBackColor = true;
@@ -2022,14 +2248,16 @@
             // 
             this.TerrainLayer22ColorTextBox.Enabled = false;
             this.TerrainLayer22ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer22ColorTextBox.Location = new System.Drawing.Point(157, 586);
+            this.TerrainLayer22ColorTextBox.Location = new System.Drawing.Point(236, 902);
+            this.TerrainLayer22ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer22ColorTextBox.Name = "TerrainLayer22ColorTextBox";
-            this.TerrainLayer22ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer22ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer22ColorTextBox.TabIndex = 203;
             // 
             // TerrainLayer22NumericUpDown
             // 
-            this.TerrainLayer22NumericUpDown.Location = new System.Drawing.Point(100, 586);
+            this.TerrainLayer22NumericUpDown.Location = new System.Drawing.Point(150, 902);
+            this.TerrainLayer22NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer22NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2041,7 +2269,7 @@
             0,
             0});
             this.TerrainLayer22NumericUpDown.Name = "TerrainLayer22NumericUpDown";
-            this.TerrainLayer22NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer22NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer22NumericUpDown.TabIndex = 202;
             this.TerrainLayer22NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2052,26 +2280,29 @@
             // TerrainLayer21CheckBox
             // 
             this.TerrainLayer21CheckBox.AutoSize = true;
-            this.TerrainLayer21CheckBox.Location = new System.Drawing.Point(6, 563);
+            this.TerrainLayer21CheckBox.Location = new System.Drawing.Point(9, 866);
+            this.TerrainLayer21CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer21CheckBox.Name = "TerrainLayer21CheckBox";
-            this.TerrainLayer21CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer21CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer21CheckBox.TabIndex = 201;
             this.TerrainLayer21CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer21AliasTextBox
             // 
-            this.TerrainLayer21AliasTextBox.Location = new System.Drawing.Point(22, 560);
+            this.TerrainLayer21AliasTextBox.Location = new System.Drawing.Point(33, 862);
+            this.TerrainLayer21AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer21AliasTextBox.Name = "TerrainLayer21AliasTextBox";
-            this.TerrainLayer21AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer21AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer21AliasTextBox.TabIndex = 200;
             this.TerrainLayer21AliasTextBox.Text = "water deep";
             this.TerrainLayer21AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer21Button
             // 
-            this.TerrainLayer21Button.Location = new System.Drawing.Point(215, 558);
+            this.TerrainLayer21Button.Location = new System.Drawing.Point(322, 858);
+            this.TerrainLayer21Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer21Button.Name = "TerrainLayer21Button";
-            this.TerrainLayer21Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer21Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer21Button.TabIndex = 199;
             this.TerrainLayer21Button.Text = "Edit";
             this.TerrainLayer21Button.UseVisualStyleBackColor = true;
@@ -2080,14 +2311,16 @@
             // 
             this.TerrainLayer21ColorTextBox.Enabled = false;
             this.TerrainLayer21ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer21ColorTextBox.Location = new System.Drawing.Point(157, 560);
+            this.TerrainLayer21ColorTextBox.Location = new System.Drawing.Point(236, 862);
+            this.TerrainLayer21ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer21ColorTextBox.Name = "TerrainLayer21ColorTextBox";
-            this.TerrainLayer21ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer21ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer21ColorTextBox.TabIndex = 198;
             // 
             // TerrainLayer21NumericUpDown
             // 
-            this.TerrainLayer21NumericUpDown.Location = new System.Drawing.Point(100, 560);
+            this.TerrainLayer21NumericUpDown.Location = new System.Drawing.Point(150, 862);
+            this.TerrainLayer21NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer21NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2099,7 +2332,7 @@
             0,
             0});
             this.TerrainLayer21NumericUpDown.Name = "TerrainLayer21NumericUpDown";
-            this.TerrainLayer21NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer21NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer21NumericUpDown.TabIndex = 197;
             this.TerrainLayer21NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2110,26 +2343,29 @@
             // TerrainLayer20CheckBox
             // 
             this.TerrainLayer20CheckBox.AutoSize = true;
-            this.TerrainLayer20CheckBox.Location = new System.Drawing.Point(6, 537);
+            this.TerrainLayer20CheckBox.Location = new System.Drawing.Point(9, 826);
+            this.TerrainLayer20CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer20CheckBox.Name = "TerrainLayer20CheckBox";
-            this.TerrainLayer20CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer20CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer20CheckBox.TabIndex = 196;
             this.TerrainLayer20CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer20AliasTextBox
             // 
-            this.TerrainLayer20AliasTextBox.Location = new System.Drawing.Point(22, 534);
+            this.TerrainLayer20AliasTextBox.Location = new System.Drawing.Point(33, 822);
+            this.TerrainLayer20AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer20AliasTextBox.Name = "TerrainLayer20AliasTextBox";
-            this.TerrainLayer20AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer20AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer20AliasTextBox.TabIndex = 195;
             this.TerrainLayer20AliasTextBox.Text = "water deep";
             this.TerrainLayer20AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer20Button
             // 
-            this.TerrainLayer20Button.Location = new System.Drawing.Point(215, 532);
+            this.TerrainLayer20Button.Location = new System.Drawing.Point(322, 818);
+            this.TerrainLayer20Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer20Button.Name = "TerrainLayer20Button";
-            this.TerrainLayer20Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer20Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer20Button.TabIndex = 194;
             this.TerrainLayer20Button.Text = "Edit";
             this.TerrainLayer20Button.UseVisualStyleBackColor = true;
@@ -2138,14 +2374,16 @@
             // 
             this.TerrainLayer20ColorTextBox.Enabled = false;
             this.TerrainLayer20ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer20ColorTextBox.Location = new System.Drawing.Point(157, 534);
+            this.TerrainLayer20ColorTextBox.Location = new System.Drawing.Point(236, 822);
+            this.TerrainLayer20ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer20ColorTextBox.Name = "TerrainLayer20ColorTextBox";
-            this.TerrainLayer20ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer20ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer20ColorTextBox.TabIndex = 193;
             // 
             // TerrainLayer20NumericUpDown
             // 
-            this.TerrainLayer20NumericUpDown.Location = new System.Drawing.Point(100, 534);
+            this.TerrainLayer20NumericUpDown.Location = new System.Drawing.Point(150, 822);
+            this.TerrainLayer20NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer20NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2157,7 +2395,7 @@
             0,
             0});
             this.TerrainLayer20NumericUpDown.Name = "TerrainLayer20NumericUpDown";
-            this.TerrainLayer20NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer20NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer20NumericUpDown.TabIndex = 192;
             this.TerrainLayer20NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2168,26 +2406,29 @@
             // TerrainLayer19CheckBox
             // 
             this.TerrainLayer19CheckBox.AutoSize = true;
-            this.TerrainLayer19CheckBox.Location = new System.Drawing.Point(6, 511);
+            this.TerrainLayer19CheckBox.Location = new System.Drawing.Point(9, 786);
+            this.TerrainLayer19CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer19CheckBox.Name = "TerrainLayer19CheckBox";
-            this.TerrainLayer19CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer19CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer19CheckBox.TabIndex = 191;
             this.TerrainLayer19CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer19AliasTextBox
             // 
-            this.TerrainLayer19AliasTextBox.Location = new System.Drawing.Point(22, 508);
+            this.TerrainLayer19AliasTextBox.Location = new System.Drawing.Point(33, 782);
+            this.TerrainLayer19AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer19AliasTextBox.Name = "TerrainLayer19AliasTextBox";
-            this.TerrainLayer19AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer19AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer19AliasTextBox.TabIndex = 190;
             this.TerrainLayer19AliasTextBox.Text = "water deep";
             this.TerrainLayer19AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer19Button
             // 
-            this.TerrainLayer19Button.Location = new System.Drawing.Point(215, 506);
+            this.TerrainLayer19Button.Location = new System.Drawing.Point(322, 778);
+            this.TerrainLayer19Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer19Button.Name = "TerrainLayer19Button";
-            this.TerrainLayer19Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer19Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer19Button.TabIndex = 189;
             this.TerrainLayer19Button.Text = "Edit";
             this.TerrainLayer19Button.UseVisualStyleBackColor = true;
@@ -2196,14 +2437,16 @@
             // 
             this.TerrainLayer19ColorTextBox.Enabled = false;
             this.TerrainLayer19ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer19ColorTextBox.Location = new System.Drawing.Point(157, 508);
+            this.TerrainLayer19ColorTextBox.Location = new System.Drawing.Point(236, 782);
+            this.TerrainLayer19ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer19ColorTextBox.Name = "TerrainLayer19ColorTextBox";
-            this.TerrainLayer19ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer19ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer19ColorTextBox.TabIndex = 188;
             // 
             // TerrainLayer19NumericUpDown
             // 
-            this.TerrainLayer19NumericUpDown.Location = new System.Drawing.Point(100, 508);
+            this.TerrainLayer19NumericUpDown.Location = new System.Drawing.Point(150, 782);
+            this.TerrainLayer19NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer19NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2215,7 +2458,7 @@
             0,
             0});
             this.TerrainLayer19NumericUpDown.Name = "TerrainLayer19NumericUpDown";
-            this.TerrainLayer19NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer19NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer19NumericUpDown.TabIndex = 187;
             this.TerrainLayer19NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2226,26 +2469,29 @@
             // TerrainLayer18CheckBox
             // 
             this.TerrainLayer18CheckBox.AutoSize = true;
-            this.TerrainLayer18CheckBox.Location = new System.Drawing.Point(6, 485);
+            this.TerrainLayer18CheckBox.Location = new System.Drawing.Point(9, 746);
+            this.TerrainLayer18CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer18CheckBox.Name = "TerrainLayer18CheckBox";
-            this.TerrainLayer18CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer18CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer18CheckBox.TabIndex = 186;
             this.TerrainLayer18CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer18AliasTextBox
             // 
-            this.TerrainLayer18AliasTextBox.Location = new System.Drawing.Point(22, 482);
+            this.TerrainLayer18AliasTextBox.Location = new System.Drawing.Point(33, 742);
+            this.TerrainLayer18AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer18AliasTextBox.Name = "TerrainLayer18AliasTextBox";
-            this.TerrainLayer18AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer18AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer18AliasTextBox.TabIndex = 185;
             this.TerrainLayer18AliasTextBox.Text = "water deep";
             this.TerrainLayer18AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer18Button
             // 
-            this.TerrainLayer18Button.Location = new System.Drawing.Point(215, 480);
+            this.TerrainLayer18Button.Location = new System.Drawing.Point(322, 738);
+            this.TerrainLayer18Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer18Button.Name = "TerrainLayer18Button";
-            this.TerrainLayer18Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer18Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer18Button.TabIndex = 184;
             this.TerrainLayer18Button.Text = "Edit";
             this.TerrainLayer18Button.UseVisualStyleBackColor = true;
@@ -2254,14 +2500,16 @@
             // 
             this.TerrainLayer18ColorTextBox.Enabled = false;
             this.TerrainLayer18ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer18ColorTextBox.Location = new System.Drawing.Point(157, 482);
+            this.TerrainLayer18ColorTextBox.Location = new System.Drawing.Point(236, 742);
+            this.TerrainLayer18ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer18ColorTextBox.Name = "TerrainLayer18ColorTextBox";
-            this.TerrainLayer18ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer18ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer18ColorTextBox.TabIndex = 183;
             // 
             // TerrainLayer18NumericUpDown
             // 
-            this.TerrainLayer18NumericUpDown.Location = new System.Drawing.Point(100, 482);
+            this.TerrainLayer18NumericUpDown.Location = new System.Drawing.Point(150, 742);
+            this.TerrainLayer18NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer18NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2273,7 +2521,7 @@
             0,
             0});
             this.TerrainLayer18NumericUpDown.Name = "TerrainLayer18NumericUpDown";
-            this.TerrainLayer18NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer18NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer18NumericUpDown.TabIndex = 182;
             this.TerrainLayer18NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2284,26 +2532,29 @@
             // TerrainLayer17CheckBox
             // 
             this.TerrainLayer17CheckBox.AutoSize = true;
-            this.TerrainLayer17CheckBox.Location = new System.Drawing.Point(6, 459);
+            this.TerrainLayer17CheckBox.Location = new System.Drawing.Point(9, 706);
+            this.TerrainLayer17CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer17CheckBox.Name = "TerrainLayer17CheckBox";
-            this.TerrainLayer17CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer17CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer17CheckBox.TabIndex = 181;
             this.TerrainLayer17CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer17AliasTextBox
             // 
-            this.TerrainLayer17AliasTextBox.Location = new System.Drawing.Point(22, 456);
+            this.TerrainLayer17AliasTextBox.Location = new System.Drawing.Point(33, 702);
+            this.TerrainLayer17AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer17AliasTextBox.Name = "TerrainLayer17AliasTextBox";
-            this.TerrainLayer17AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer17AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer17AliasTextBox.TabIndex = 180;
             this.TerrainLayer17AliasTextBox.Text = "water deep";
             this.TerrainLayer17AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer17Button
             // 
-            this.TerrainLayer17Button.Location = new System.Drawing.Point(215, 454);
+            this.TerrainLayer17Button.Location = new System.Drawing.Point(322, 698);
+            this.TerrainLayer17Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer17Button.Name = "TerrainLayer17Button";
-            this.TerrainLayer17Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer17Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer17Button.TabIndex = 179;
             this.TerrainLayer17Button.Text = "Edit";
             this.TerrainLayer17Button.UseVisualStyleBackColor = true;
@@ -2312,14 +2563,16 @@
             // 
             this.TerrainLayer17ColorTextBox.Enabled = false;
             this.TerrainLayer17ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer17ColorTextBox.Location = new System.Drawing.Point(157, 456);
+            this.TerrainLayer17ColorTextBox.Location = new System.Drawing.Point(236, 702);
+            this.TerrainLayer17ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer17ColorTextBox.Name = "TerrainLayer17ColorTextBox";
-            this.TerrainLayer17ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer17ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer17ColorTextBox.TabIndex = 178;
             // 
             // TerrainLayer17NumericUpDown
             // 
-            this.TerrainLayer17NumericUpDown.Location = new System.Drawing.Point(100, 456);
+            this.TerrainLayer17NumericUpDown.Location = new System.Drawing.Point(150, 702);
+            this.TerrainLayer17NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer17NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2331,7 +2584,7 @@
             0,
             0});
             this.TerrainLayer17NumericUpDown.Name = "TerrainLayer17NumericUpDown";
-            this.TerrainLayer17NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer17NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer17NumericUpDown.TabIndex = 177;
             this.TerrainLayer17NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2342,26 +2595,29 @@
             // TerrainLayer16CheckBox
             // 
             this.TerrainLayer16CheckBox.AutoSize = true;
-            this.TerrainLayer16CheckBox.Location = new System.Drawing.Point(6, 433);
+            this.TerrainLayer16CheckBox.Location = new System.Drawing.Point(9, 666);
+            this.TerrainLayer16CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer16CheckBox.Name = "TerrainLayer16CheckBox";
-            this.TerrainLayer16CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer16CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer16CheckBox.TabIndex = 176;
             this.TerrainLayer16CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer16AliasTextBox
             // 
-            this.TerrainLayer16AliasTextBox.Location = new System.Drawing.Point(22, 430);
+            this.TerrainLayer16AliasTextBox.Location = new System.Drawing.Point(33, 662);
+            this.TerrainLayer16AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer16AliasTextBox.Name = "TerrainLayer16AliasTextBox";
-            this.TerrainLayer16AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer16AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer16AliasTextBox.TabIndex = 175;
             this.TerrainLayer16AliasTextBox.Text = "water deep";
             this.TerrainLayer16AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer16Button
             // 
-            this.TerrainLayer16Button.Location = new System.Drawing.Point(215, 428);
+            this.TerrainLayer16Button.Location = new System.Drawing.Point(322, 658);
+            this.TerrainLayer16Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer16Button.Name = "TerrainLayer16Button";
-            this.TerrainLayer16Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer16Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer16Button.TabIndex = 174;
             this.TerrainLayer16Button.Text = "Edit";
             this.TerrainLayer16Button.UseVisualStyleBackColor = true;
@@ -2370,14 +2626,16 @@
             // 
             this.TerrainLayer16ColorTextBox.Enabled = false;
             this.TerrainLayer16ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer16ColorTextBox.Location = new System.Drawing.Point(157, 430);
+            this.TerrainLayer16ColorTextBox.Location = new System.Drawing.Point(236, 662);
+            this.TerrainLayer16ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer16ColorTextBox.Name = "TerrainLayer16ColorTextBox";
-            this.TerrainLayer16ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer16ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer16ColorTextBox.TabIndex = 173;
             // 
             // TerrainLayer16NumericUpDown
             // 
-            this.TerrainLayer16NumericUpDown.Location = new System.Drawing.Point(100, 430);
+            this.TerrainLayer16NumericUpDown.Location = new System.Drawing.Point(150, 662);
+            this.TerrainLayer16NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer16NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2389,7 +2647,7 @@
             0,
             0});
             this.TerrainLayer16NumericUpDown.Name = "TerrainLayer16NumericUpDown";
-            this.TerrainLayer16NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer16NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer16NumericUpDown.TabIndex = 172;
             this.TerrainLayer16NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2400,26 +2658,29 @@
             // TerrainLayer15CheckBox
             // 
             this.TerrainLayer15CheckBox.AutoSize = true;
-            this.TerrainLayer15CheckBox.Location = new System.Drawing.Point(6, 407);
+            this.TerrainLayer15CheckBox.Location = new System.Drawing.Point(9, 626);
+            this.TerrainLayer15CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer15CheckBox.Name = "TerrainLayer15CheckBox";
-            this.TerrainLayer15CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer15CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer15CheckBox.TabIndex = 171;
             this.TerrainLayer15CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer15AliasTextBox
             // 
-            this.TerrainLayer15AliasTextBox.Location = new System.Drawing.Point(22, 404);
+            this.TerrainLayer15AliasTextBox.Location = new System.Drawing.Point(33, 622);
+            this.TerrainLayer15AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer15AliasTextBox.Name = "TerrainLayer15AliasTextBox";
-            this.TerrainLayer15AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer15AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer15AliasTextBox.TabIndex = 170;
             this.TerrainLayer15AliasTextBox.Text = "water deep";
             this.TerrainLayer15AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer15Button
             // 
-            this.TerrainLayer15Button.Location = new System.Drawing.Point(215, 402);
+            this.TerrainLayer15Button.Location = new System.Drawing.Point(322, 618);
+            this.TerrainLayer15Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer15Button.Name = "TerrainLayer15Button";
-            this.TerrainLayer15Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer15Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer15Button.TabIndex = 169;
             this.TerrainLayer15Button.Text = "Edit";
             this.TerrainLayer15Button.UseVisualStyleBackColor = true;
@@ -2428,14 +2689,16 @@
             // 
             this.TerrainLayer15ColorTextBox.Enabled = false;
             this.TerrainLayer15ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer15ColorTextBox.Location = new System.Drawing.Point(157, 404);
+            this.TerrainLayer15ColorTextBox.Location = new System.Drawing.Point(236, 622);
+            this.TerrainLayer15ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer15ColorTextBox.Name = "TerrainLayer15ColorTextBox";
-            this.TerrainLayer15ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer15ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer15ColorTextBox.TabIndex = 168;
             // 
             // TerrainLayer15NumericUpDown
             // 
-            this.TerrainLayer15NumericUpDown.Location = new System.Drawing.Point(100, 404);
+            this.TerrainLayer15NumericUpDown.Location = new System.Drawing.Point(150, 622);
+            this.TerrainLayer15NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer15NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2447,7 +2710,7 @@
             0,
             0});
             this.TerrainLayer15NumericUpDown.Name = "TerrainLayer15NumericUpDown";
-            this.TerrainLayer15NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer15NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer15NumericUpDown.TabIndex = 167;
             this.TerrainLayer15NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2458,26 +2721,29 @@
             // TerrainLayer14CheckBox
             // 
             this.TerrainLayer14CheckBox.AutoSize = true;
-            this.TerrainLayer14CheckBox.Location = new System.Drawing.Point(6, 381);
+            this.TerrainLayer14CheckBox.Location = new System.Drawing.Point(9, 586);
+            this.TerrainLayer14CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer14CheckBox.Name = "TerrainLayer14CheckBox";
-            this.TerrainLayer14CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer14CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer14CheckBox.TabIndex = 166;
             this.TerrainLayer14CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer14AliasTextBox
             // 
-            this.TerrainLayer14AliasTextBox.Location = new System.Drawing.Point(22, 378);
+            this.TerrainLayer14AliasTextBox.Location = new System.Drawing.Point(33, 582);
+            this.TerrainLayer14AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer14AliasTextBox.Name = "TerrainLayer14AliasTextBox";
-            this.TerrainLayer14AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer14AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer14AliasTextBox.TabIndex = 165;
             this.TerrainLayer14AliasTextBox.Text = "water deep";
             this.TerrainLayer14AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer14Button
             // 
-            this.TerrainLayer14Button.Location = new System.Drawing.Point(215, 376);
+            this.TerrainLayer14Button.Location = new System.Drawing.Point(322, 578);
+            this.TerrainLayer14Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer14Button.Name = "TerrainLayer14Button";
-            this.TerrainLayer14Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer14Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer14Button.TabIndex = 164;
             this.TerrainLayer14Button.Text = "Edit";
             this.TerrainLayer14Button.UseVisualStyleBackColor = true;
@@ -2486,14 +2752,16 @@
             // 
             this.TerrainLayer14ColorTextBox.Enabled = false;
             this.TerrainLayer14ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer14ColorTextBox.Location = new System.Drawing.Point(157, 378);
+            this.TerrainLayer14ColorTextBox.Location = new System.Drawing.Point(236, 582);
+            this.TerrainLayer14ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer14ColorTextBox.Name = "TerrainLayer14ColorTextBox";
-            this.TerrainLayer14ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer14ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer14ColorTextBox.TabIndex = 163;
             // 
             // TerrainLayer14NumericUpDown
             // 
-            this.TerrainLayer14NumericUpDown.Location = new System.Drawing.Point(100, 378);
+            this.TerrainLayer14NumericUpDown.Location = new System.Drawing.Point(150, 582);
+            this.TerrainLayer14NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer14NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2505,7 +2773,7 @@
             0,
             0});
             this.TerrainLayer14NumericUpDown.Name = "TerrainLayer14NumericUpDown";
-            this.TerrainLayer14NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer14NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer14NumericUpDown.TabIndex = 162;
             this.TerrainLayer14NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2516,26 +2784,29 @@
             // TerrainLayer13CheckBox
             // 
             this.TerrainLayer13CheckBox.AutoSize = true;
-            this.TerrainLayer13CheckBox.Location = new System.Drawing.Point(6, 355);
+            this.TerrainLayer13CheckBox.Location = new System.Drawing.Point(9, 546);
+            this.TerrainLayer13CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer13CheckBox.Name = "TerrainLayer13CheckBox";
-            this.TerrainLayer13CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer13CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer13CheckBox.TabIndex = 161;
             this.TerrainLayer13CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer13AliasTextBox
             // 
-            this.TerrainLayer13AliasTextBox.Location = new System.Drawing.Point(22, 352);
+            this.TerrainLayer13AliasTextBox.Location = new System.Drawing.Point(33, 542);
+            this.TerrainLayer13AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer13AliasTextBox.Name = "TerrainLayer13AliasTextBox";
-            this.TerrainLayer13AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer13AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer13AliasTextBox.TabIndex = 160;
             this.TerrainLayer13AliasTextBox.Text = "water deep";
             this.TerrainLayer13AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer13Button
             // 
-            this.TerrainLayer13Button.Location = new System.Drawing.Point(215, 350);
+            this.TerrainLayer13Button.Location = new System.Drawing.Point(322, 538);
+            this.TerrainLayer13Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer13Button.Name = "TerrainLayer13Button";
-            this.TerrainLayer13Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer13Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer13Button.TabIndex = 159;
             this.TerrainLayer13Button.Text = "Edit";
             this.TerrainLayer13Button.UseVisualStyleBackColor = true;
@@ -2544,14 +2815,16 @@
             // 
             this.TerrainLayer13ColorTextBox.Enabled = false;
             this.TerrainLayer13ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer13ColorTextBox.Location = new System.Drawing.Point(157, 352);
+            this.TerrainLayer13ColorTextBox.Location = new System.Drawing.Point(236, 542);
+            this.TerrainLayer13ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer13ColorTextBox.Name = "TerrainLayer13ColorTextBox";
-            this.TerrainLayer13ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer13ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer13ColorTextBox.TabIndex = 158;
             // 
             // TerrainLayer13NumericUpDown
             // 
-            this.TerrainLayer13NumericUpDown.Location = new System.Drawing.Point(100, 352);
+            this.TerrainLayer13NumericUpDown.Location = new System.Drawing.Point(150, 542);
+            this.TerrainLayer13NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer13NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2563,7 +2836,7 @@
             0,
             0});
             this.TerrainLayer13NumericUpDown.Name = "TerrainLayer13NumericUpDown";
-            this.TerrainLayer13NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer13NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer13NumericUpDown.TabIndex = 157;
             this.TerrainLayer13NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2574,26 +2847,29 @@
             // TerrainLayer12CheckBox
             // 
             this.TerrainLayer12CheckBox.AutoSize = true;
-            this.TerrainLayer12CheckBox.Location = new System.Drawing.Point(6, 329);
+            this.TerrainLayer12CheckBox.Location = new System.Drawing.Point(9, 506);
+            this.TerrainLayer12CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer12CheckBox.Name = "TerrainLayer12CheckBox";
-            this.TerrainLayer12CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer12CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer12CheckBox.TabIndex = 156;
             this.TerrainLayer12CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer12AliasTextBox
             // 
-            this.TerrainLayer12AliasTextBox.Location = new System.Drawing.Point(22, 326);
+            this.TerrainLayer12AliasTextBox.Location = new System.Drawing.Point(33, 502);
+            this.TerrainLayer12AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer12AliasTextBox.Name = "TerrainLayer12AliasTextBox";
-            this.TerrainLayer12AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer12AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer12AliasTextBox.TabIndex = 155;
             this.TerrainLayer12AliasTextBox.Text = "water deep";
             this.TerrainLayer12AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer12Button
             // 
-            this.TerrainLayer12Button.Location = new System.Drawing.Point(215, 324);
+            this.TerrainLayer12Button.Location = new System.Drawing.Point(322, 498);
+            this.TerrainLayer12Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer12Button.Name = "TerrainLayer12Button";
-            this.TerrainLayer12Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer12Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer12Button.TabIndex = 154;
             this.TerrainLayer12Button.Text = "Edit";
             this.TerrainLayer12Button.UseVisualStyleBackColor = true;
@@ -2602,14 +2878,16 @@
             // 
             this.TerrainLayer12ColorTextBox.Enabled = false;
             this.TerrainLayer12ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer12ColorTextBox.Location = new System.Drawing.Point(157, 326);
+            this.TerrainLayer12ColorTextBox.Location = new System.Drawing.Point(236, 502);
+            this.TerrainLayer12ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer12ColorTextBox.Name = "TerrainLayer12ColorTextBox";
-            this.TerrainLayer12ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer12ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer12ColorTextBox.TabIndex = 153;
             // 
             // TerrainLayer12NumericUpDown
             // 
-            this.TerrainLayer12NumericUpDown.Location = new System.Drawing.Point(100, 326);
+            this.TerrainLayer12NumericUpDown.Location = new System.Drawing.Point(150, 502);
+            this.TerrainLayer12NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer12NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2621,7 +2899,7 @@
             0,
             0});
             this.TerrainLayer12NumericUpDown.Name = "TerrainLayer12NumericUpDown";
-            this.TerrainLayer12NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer12NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer12NumericUpDown.TabIndex = 152;
             this.TerrainLayer12NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2632,26 +2910,29 @@
             // TerrainLayer11CheckBox
             // 
             this.TerrainLayer11CheckBox.AutoSize = true;
-            this.TerrainLayer11CheckBox.Location = new System.Drawing.Point(6, 303);
+            this.TerrainLayer11CheckBox.Location = new System.Drawing.Point(9, 466);
+            this.TerrainLayer11CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer11CheckBox.Name = "TerrainLayer11CheckBox";
-            this.TerrainLayer11CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer11CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer11CheckBox.TabIndex = 151;
             this.TerrainLayer11CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer11AliasTextBox
             // 
-            this.TerrainLayer11AliasTextBox.Location = new System.Drawing.Point(22, 300);
+            this.TerrainLayer11AliasTextBox.Location = new System.Drawing.Point(33, 462);
+            this.TerrainLayer11AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer11AliasTextBox.Name = "TerrainLayer11AliasTextBox";
-            this.TerrainLayer11AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer11AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer11AliasTextBox.TabIndex = 150;
             this.TerrainLayer11AliasTextBox.Text = "water deep";
             this.TerrainLayer11AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer11Button
             // 
-            this.TerrainLayer11Button.Location = new System.Drawing.Point(215, 298);
+            this.TerrainLayer11Button.Location = new System.Drawing.Point(322, 458);
+            this.TerrainLayer11Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer11Button.Name = "TerrainLayer11Button";
-            this.TerrainLayer11Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer11Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer11Button.TabIndex = 149;
             this.TerrainLayer11Button.Text = "Edit";
             this.TerrainLayer11Button.UseVisualStyleBackColor = true;
@@ -2660,14 +2941,16 @@
             // 
             this.TerrainLayer11ColorTextBox.Enabled = false;
             this.TerrainLayer11ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer11ColorTextBox.Location = new System.Drawing.Point(157, 300);
+            this.TerrainLayer11ColorTextBox.Location = new System.Drawing.Point(236, 462);
+            this.TerrainLayer11ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer11ColorTextBox.Name = "TerrainLayer11ColorTextBox";
-            this.TerrainLayer11ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer11ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer11ColorTextBox.TabIndex = 148;
             // 
             // TerrainLayer11NumericUpDown
             // 
-            this.TerrainLayer11NumericUpDown.Location = new System.Drawing.Point(100, 300);
+            this.TerrainLayer11NumericUpDown.Location = new System.Drawing.Point(150, 462);
+            this.TerrainLayer11NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer11NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2679,7 +2962,7 @@
             0,
             0});
             this.TerrainLayer11NumericUpDown.Name = "TerrainLayer11NumericUpDown";
-            this.TerrainLayer11NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer11NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer11NumericUpDown.TabIndex = 147;
             this.TerrainLayer11NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2690,26 +2973,29 @@
             // TerrainLayer10CheckBox
             // 
             this.TerrainLayer10CheckBox.AutoSize = true;
-            this.TerrainLayer10CheckBox.Location = new System.Drawing.Point(6, 277);
+            this.TerrainLayer10CheckBox.Location = new System.Drawing.Point(9, 426);
+            this.TerrainLayer10CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer10CheckBox.Name = "TerrainLayer10CheckBox";
-            this.TerrainLayer10CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer10CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer10CheckBox.TabIndex = 146;
             this.TerrainLayer10CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer10AliasTextBox
             // 
-            this.TerrainLayer10AliasTextBox.Location = new System.Drawing.Point(22, 274);
+            this.TerrainLayer10AliasTextBox.Location = new System.Drawing.Point(33, 422);
+            this.TerrainLayer10AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer10AliasTextBox.Name = "TerrainLayer10AliasTextBox";
-            this.TerrainLayer10AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer10AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer10AliasTextBox.TabIndex = 145;
             this.TerrainLayer10AliasTextBox.Text = "water deep";
             this.TerrainLayer10AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer10Button
             // 
-            this.TerrainLayer10Button.Location = new System.Drawing.Point(215, 272);
+            this.TerrainLayer10Button.Location = new System.Drawing.Point(322, 418);
+            this.TerrainLayer10Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer10Button.Name = "TerrainLayer10Button";
-            this.TerrainLayer10Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer10Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer10Button.TabIndex = 144;
             this.TerrainLayer10Button.Text = "Edit";
             this.TerrainLayer10Button.UseVisualStyleBackColor = true;
@@ -2718,14 +3004,16 @@
             // 
             this.TerrainLayer10ColorTextBox.Enabled = false;
             this.TerrainLayer10ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer10ColorTextBox.Location = new System.Drawing.Point(157, 274);
+            this.TerrainLayer10ColorTextBox.Location = new System.Drawing.Point(236, 422);
+            this.TerrainLayer10ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer10ColorTextBox.Name = "TerrainLayer10ColorTextBox";
-            this.TerrainLayer10ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer10ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer10ColorTextBox.TabIndex = 143;
             // 
             // TerrainLayer10NumericUpDown
             // 
-            this.TerrainLayer10NumericUpDown.Location = new System.Drawing.Point(100, 274);
+            this.TerrainLayer10NumericUpDown.Location = new System.Drawing.Point(150, 422);
+            this.TerrainLayer10NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer10NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2737,7 +3025,7 @@
             0,
             0});
             this.TerrainLayer10NumericUpDown.Name = "TerrainLayer10NumericUpDown";
-            this.TerrainLayer10NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer10NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer10NumericUpDown.TabIndex = 142;
             this.TerrainLayer10NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2748,26 +3036,29 @@
             // TerrainLayer9CheckBox
             // 
             this.TerrainLayer9CheckBox.AutoSize = true;
-            this.TerrainLayer9CheckBox.Location = new System.Drawing.Point(6, 251);
+            this.TerrainLayer9CheckBox.Location = new System.Drawing.Point(9, 386);
+            this.TerrainLayer9CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer9CheckBox.Name = "TerrainLayer9CheckBox";
-            this.TerrainLayer9CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer9CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer9CheckBox.TabIndex = 141;
             this.TerrainLayer9CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer9AliasTextBox
             // 
-            this.TerrainLayer9AliasTextBox.Location = new System.Drawing.Point(22, 248);
+            this.TerrainLayer9AliasTextBox.Location = new System.Drawing.Point(33, 382);
+            this.TerrainLayer9AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer9AliasTextBox.Name = "TerrainLayer9AliasTextBox";
-            this.TerrainLayer9AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer9AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer9AliasTextBox.TabIndex = 140;
             this.TerrainLayer9AliasTextBox.Text = "water deep";
             this.TerrainLayer9AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer9Button
             // 
-            this.TerrainLayer9Button.Location = new System.Drawing.Point(215, 246);
+            this.TerrainLayer9Button.Location = new System.Drawing.Point(322, 378);
+            this.TerrainLayer9Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer9Button.Name = "TerrainLayer9Button";
-            this.TerrainLayer9Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer9Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer9Button.TabIndex = 139;
             this.TerrainLayer9Button.Text = "Edit";
             this.TerrainLayer9Button.UseVisualStyleBackColor = true;
@@ -2776,14 +3067,16 @@
             // 
             this.TerrainLayer9ColorTextBox.Enabled = false;
             this.TerrainLayer9ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer9ColorTextBox.Location = new System.Drawing.Point(157, 248);
+            this.TerrainLayer9ColorTextBox.Location = new System.Drawing.Point(236, 382);
+            this.TerrainLayer9ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer9ColorTextBox.Name = "TerrainLayer9ColorTextBox";
-            this.TerrainLayer9ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer9ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer9ColorTextBox.TabIndex = 138;
             // 
             // TerrainLayer9NumericUpDown
             // 
-            this.TerrainLayer9NumericUpDown.Location = new System.Drawing.Point(100, 248);
+            this.TerrainLayer9NumericUpDown.Location = new System.Drawing.Point(150, 382);
+            this.TerrainLayer9NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer9NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2795,7 +3088,7 @@
             0,
             0});
             this.TerrainLayer9NumericUpDown.Name = "TerrainLayer9NumericUpDown";
-            this.TerrainLayer9NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer9NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer9NumericUpDown.TabIndex = 137;
             this.TerrainLayer9NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2806,26 +3099,29 @@
             // TerrainLayer8CheckBox
             // 
             this.TerrainLayer8CheckBox.AutoSize = true;
-            this.TerrainLayer8CheckBox.Location = new System.Drawing.Point(6, 225);
+            this.TerrainLayer8CheckBox.Location = new System.Drawing.Point(9, 346);
+            this.TerrainLayer8CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer8CheckBox.Name = "TerrainLayer8CheckBox";
-            this.TerrainLayer8CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer8CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer8CheckBox.TabIndex = 136;
             this.TerrainLayer8CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer8AliasTextBox
             // 
-            this.TerrainLayer8AliasTextBox.Location = new System.Drawing.Point(22, 222);
+            this.TerrainLayer8AliasTextBox.Location = new System.Drawing.Point(33, 342);
+            this.TerrainLayer8AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer8AliasTextBox.Name = "TerrainLayer8AliasTextBox";
-            this.TerrainLayer8AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer8AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer8AliasTextBox.TabIndex = 135;
             this.TerrainLayer8AliasTextBox.Text = "water deep";
             this.TerrainLayer8AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer8Button
             // 
-            this.TerrainLayer8Button.Location = new System.Drawing.Point(215, 220);
+            this.TerrainLayer8Button.Location = new System.Drawing.Point(322, 338);
+            this.TerrainLayer8Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer8Button.Name = "TerrainLayer8Button";
-            this.TerrainLayer8Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer8Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer8Button.TabIndex = 134;
             this.TerrainLayer8Button.Text = "Edit";
             this.TerrainLayer8Button.UseVisualStyleBackColor = true;
@@ -2834,14 +3130,16 @@
             // 
             this.TerrainLayer8ColorTextBox.Enabled = false;
             this.TerrainLayer8ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer8ColorTextBox.Location = new System.Drawing.Point(157, 222);
+            this.TerrainLayer8ColorTextBox.Location = new System.Drawing.Point(236, 342);
+            this.TerrainLayer8ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer8ColorTextBox.Name = "TerrainLayer8ColorTextBox";
-            this.TerrainLayer8ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer8ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer8ColorTextBox.TabIndex = 133;
             // 
             // TerrainLayer8NumericUpDown
             // 
-            this.TerrainLayer8NumericUpDown.Location = new System.Drawing.Point(100, 222);
+            this.TerrainLayer8NumericUpDown.Location = new System.Drawing.Point(150, 342);
+            this.TerrainLayer8NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer8NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2853,7 +3151,7 @@
             0,
             0});
             this.TerrainLayer8NumericUpDown.Name = "TerrainLayer8NumericUpDown";
-            this.TerrainLayer8NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer8NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer8NumericUpDown.TabIndex = 132;
             this.TerrainLayer8NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2864,26 +3162,29 @@
             // TerrainLayer7CheckBox
             // 
             this.TerrainLayer7CheckBox.AutoSize = true;
-            this.TerrainLayer7CheckBox.Location = new System.Drawing.Point(6, 199);
+            this.TerrainLayer7CheckBox.Location = new System.Drawing.Point(9, 306);
+            this.TerrainLayer7CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer7CheckBox.Name = "TerrainLayer7CheckBox";
-            this.TerrainLayer7CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer7CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer7CheckBox.TabIndex = 131;
             this.TerrainLayer7CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer7AliasTextBox
             // 
-            this.TerrainLayer7AliasTextBox.Location = new System.Drawing.Point(22, 196);
+            this.TerrainLayer7AliasTextBox.Location = new System.Drawing.Point(33, 302);
+            this.TerrainLayer7AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer7AliasTextBox.Name = "TerrainLayer7AliasTextBox";
-            this.TerrainLayer7AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer7AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer7AliasTextBox.TabIndex = 130;
             this.TerrainLayer7AliasTextBox.Text = "water deep";
             this.TerrainLayer7AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer7Button
             // 
-            this.TerrainLayer7Button.Location = new System.Drawing.Point(215, 194);
+            this.TerrainLayer7Button.Location = new System.Drawing.Point(322, 298);
+            this.TerrainLayer7Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer7Button.Name = "TerrainLayer7Button";
-            this.TerrainLayer7Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer7Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer7Button.TabIndex = 129;
             this.TerrainLayer7Button.Text = "Edit";
             this.TerrainLayer7Button.UseVisualStyleBackColor = true;
@@ -2892,14 +3193,16 @@
             // 
             this.TerrainLayer7ColorTextBox.Enabled = false;
             this.TerrainLayer7ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer7ColorTextBox.Location = new System.Drawing.Point(157, 196);
+            this.TerrainLayer7ColorTextBox.Location = new System.Drawing.Point(236, 302);
+            this.TerrainLayer7ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer7ColorTextBox.Name = "TerrainLayer7ColorTextBox";
-            this.TerrainLayer7ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer7ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer7ColorTextBox.TabIndex = 128;
             // 
             // TerrainLayer7NumericUpDown
             // 
-            this.TerrainLayer7NumericUpDown.Location = new System.Drawing.Point(100, 196);
+            this.TerrainLayer7NumericUpDown.Location = new System.Drawing.Point(150, 302);
+            this.TerrainLayer7NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer7NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2911,7 +3214,7 @@
             0,
             0});
             this.TerrainLayer7NumericUpDown.Name = "TerrainLayer7NumericUpDown";
-            this.TerrainLayer7NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer7NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer7NumericUpDown.TabIndex = 127;
             this.TerrainLayer7NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2922,26 +3225,29 @@
             // TerrainLayer6CheckBox
             // 
             this.TerrainLayer6CheckBox.AutoSize = true;
-            this.TerrainLayer6CheckBox.Location = new System.Drawing.Point(6, 173);
+            this.TerrainLayer6CheckBox.Location = new System.Drawing.Point(9, 266);
+            this.TerrainLayer6CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer6CheckBox.Name = "TerrainLayer6CheckBox";
-            this.TerrainLayer6CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer6CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer6CheckBox.TabIndex = 126;
             this.TerrainLayer6CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer6AliasTextBox
             // 
-            this.TerrainLayer6AliasTextBox.Location = new System.Drawing.Point(22, 170);
+            this.TerrainLayer6AliasTextBox.Location = new System.Drawing.Point(33, 262);
+            this.TerrainLayer6AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer6AliasTextBox.Name = "TerrainLayer6AliasTextBox";
-            this.TerrainLayer6AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer6AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer6AliasTextBox.TabIndex = 125;
             this.TerrainLayer6AliasTextBox.Text = "water deep";
             this.TerrainLayer6AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer6Button
             // 
-            this.TerrainLayer6Button.Location = new System.Drawing.Point(215, 168);
+            this.TerrainLayer6Button.Location = new System.Drawing.Point(322, 258);
+            this.TerrainLayer6Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer6Button.Name = "TerrainLayer6Button";
-            this.TerrainLayer6Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer6Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer6Button.TabIndex = 124;
             this.TerrainLayer6Button.Text = "Edit";
             this.TerrainLayer6Button.UseVisualStyleBackColor = true;
@@ -2950,14 +3256,16 @@
             // 
             this.TerrainLayer6ColorTextBox.Enabled = false;
             this.TerrainLayer6ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer6ColorTextBox.Location = new System.Drawing.Point(157, 170);
+            this.TerrainLayer6ColorTextBox.Location = new System.Drawing.Point(236, 262);
+            this.TerrainLayer6ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer6ColorTextBox.Name = "TerrainLayer6ColorTextBox";
-            this.TerrainLayer6ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer6ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer6ColorTextBox.TabIndex = 123;
             // 
             // TerrainLayer6NumericUpDown
             // 
-            this.TerrainLayer6NumericUpDown.Location = new System.Drawing.Point(100, 170);
+            this.TerrainLayer6NumericUpDown.Location = new System.Drawing.Point(150, 262);
+            this.TerrainLayer6NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer6NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -2969,7 +3277,7 @@
             0,
             0});
             this.TerrainLayer6NumericUpDown.Name = "TerrainLayer6NumericUpDown";
-            this.TerrainLayer6NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer6NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer6NumericUpDown.TabIndex = 122;
             this.TerrainLayer6NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -2980,26 +3288,29 @@
             // TerrainLayer5CheckBox
             // 
             this.TerrainLayer5CheckBox.AutoSize = true;
-            this.TerrainLayer5CheckBox.Location = new System.Drawing.Point(6, 147);
+            this.TerrainLayer5CheckBox.Location = new System.Drawing.Point(9, 226);
+            this.TerrainLayer5CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer5CheckBox.Name = "TerrainLayer5CheckBox";
-            this.TerrainLayer5CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer5CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer5CheckBox.TabIndex = 121;
             this.TerrainLayer5CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer5AliasTextBox
             // 
-            this.TerrainLayer5AliasTextBox.Location = new System.Drawing.Point(22, 144);
+            this.TerrainLayer5AliasTextBox.Location = new System.Drawing.Point(33, 222);
+            this.TerrainLayer5AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer5AliasTextBox.Name = "TerrainLayer5AliasTextBox";
-            this.TerrainLayer5AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer5AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer5AliasTextBox.TabIndex = 120;
             this.TerrainLayer5AliasTextBox.Text = "water deep";
             this.TerrainLayer5AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer5Button
             // 
-            this.TerrainLayer5Button.Location = new System.Drawing.Point(215, 142);
+            this.TerrainLayer5Button.Location = new System.Drawing.Point(322, 218);
+            this.TerrainLayer5Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer5Button.Name = "TerrainLayer5Button";
-            this.TerrainLayer5Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer5Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer5Button.TabIndex = 119;
             this.TerrainLayer5Button.Text = "Edit";
             this.TerrainLayer5Button.UseVisualStyleBackColor = true;
@@ -3008,14 +3319,16 @@
             // 
             this.TerrainLayer5ColorTextBox.Enabled = false;
             this.TerrainLayer5ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer5ColorTextBox.Location = new System.Drawing.Point(157, 144);
+            this.TerrainLayer5ColorTextBox.Location = new System.Drawing.Point(236, 222);
+            this.TerrainLayer5ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer5ColorTextBox.Name = "TerrainLayer5ColorTextBox";
-            this.TerrainLayer5ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer5ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer5ColorTextBox.TabIndex = 118;
             // 
             // TerrainLayer5NumericUpDown
             // 
-            this.TerrainLayer5NumericUpDown.Location = new System.Drawing.Point(100, 144);
+            this.TerrainLayer5NumericUpDown.Location = new System.Drawing.Point(150, 222);
+            this.TerrainLayer5NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer5NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -3027,7 +3340,7 @@
             0,
             0});
             this.TerrainLayer5NumericUpDown.Name = "TerrainLayer5NumericUpDown";
-            this.TerrainLayer5NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer5NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer5NumericUpDown.TabIndex = 117;
             this.TerrainLayer5NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -3038,26 +3351,29 @@
             // TerrainLayer4CheckBox
             // 
             this.TerrainLayer4CheckBox.AutoSize = true;
-            this.TerrainLayer4CheckBox.Location = new System.Drawing.Point(6, 121);
+            this.TerrainLayer4CheckBox.Location = new System.Drawing.Point(9, 186);
+            this.TerrainLayer4CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer4CheckBox.Name = "TerrainLayer4CheckBox";
-            this.TerrainLayer4CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer4CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer4CheckBox.TabIndex = 116;
             this.TerrainLayer4CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer4AliasTextBox
             // 
-            this.TerrainLayer4AliasTextBox.Location = new System.Drawing.Point(22, 118);
+            this.TerrainLayer4AliasTextBox.Location = new System.Drawing.Point(33, 182);
+            this.TerrainLayer4AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer4AliasTextBox.Name = "TerrainLayer4AliasTextBox";
-            this.TerrainLayer4AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer4AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer4AliasTextBox.TabIndex = 115;
             this.TerrainLayer4AliasTextBox.Text = "water deep";
             this.TerrainLayer4AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer4Button
             // 
-            this.TerrainLayer4Button.Location = new System.Drawing.Point(215, 116);
+            this.TerrainLayer4Button.Location = new System.Drawing.Point(322, 178);
+            this.TerrainLayer4Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer4Button.Name = "TerrainLayer4Button";
-            this.TerrainLayer4Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer4Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer4Button.TabIndex = 114;
             this.TerrainLayer4Button.Text = "Edit";
             this.TerrainLayer4Button.UseVisualStyleBackColor = true;
@@ -3066,14 +3382,16 @@
             // 
             this.TerrainLayer4ColorTextBox.Enabled = false;
             this.TerrainLayer4ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer4ColorTextBox.Location = new System.Drawing.Point(157, 118);
+            this.TerrainLayer4ColorTextBox.Location = new System.Drawing.Point(236, 182);
+            this.TerrainLayer4ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer4ColorTextBox.Name = "TerrainLayer4ColorTextBox";
-            this.TerrainLayer4ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer4ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer4ColorTextBox.TabIndex = 113;
             // 
             // TerrainLayer4NumericUpDown
             // 
-            this.TerrainLayer4NumericUpDown.Location = new System.Drawing.Point(100, 118);
+            this.TerrainLayer4NumericUpDown.Location = new System.Drawing.Point(150, 182);
+            this.TerrainLayer4NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer4NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -3085,7 +3403,7 @@
             0,
             0});
             this.TerrainLayer4NumericUpDown.Name = "TerrainLayer4NumericUpDown";
-            this.TerrainLayer4NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer4NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer4NumericUpDown.TabIndex = 112;
             this.TerrainLayer4NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -3096,26 +3414,29 @@
             // TerrainLayer3CheckBox
             // 
             this.TerrainLayer3CheckBox.AutoSize = true;
-            this.TerrainLayer3CheckBox.Location = new System.Drawing.Point(6, 95);
+            this.TerrainLayer3CheckBox.Location = new System.Drawing.Point(9, 146);
+            this.TerrainLayer3CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer3CheckBox.Name = "TerrainLayer3CheckBox";
-            this.TerrainLayer3CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer3CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer3CheckBox.TabIndex = 111;
             this.TerrainLayer3CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer3AliasTextBox
             // 
-            this.TerrainLayer3AliasTextBox.Location = new System.Drawing.Point(22, 92);
+            this.TerrainLayer3AliasTextBox.Location = new System.Drawing.Point(33, 142);
+            this.TerrainLayer3AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer3AliasTextBox.Name = "TerrainLayer3AliasTextBox";
-            this.TerrainLayer3AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer3AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer3AliasTextBox.TabIndex = 110;
             this.TerrainLayer3AliasTextBox.Text = "water deep";
             this.TerrainLayer3AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer3Button
             // 
-            this.TerrainLayer3Button.Location = new System.Drawing.Point(215, 90);
+            this.TerrainLayer3Button.Location = new System.Drawing.Point(322, 138);
+            this.TerrainLayer3Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer3Button.Name = "TerrainLayer3Button";
-            this.TerrainLayer3Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer3Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer3Button.TabIndex = 109;
             this.TerrainLayer3Button.Text = "Edit";
             this.TerrainLayer3Button.UseVisualStyleBackColor = true;
@@ -3124,14 +3445,16 @@
             // 
             this.TerrainLayer3ColorTextBox.Enabled = false;
             this.TerrainLayer3ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer3ColorTextBox.Location = new System.Drawing.Point(157, 92);
+            this.TerrainLayer3ColorTextBox.Location = new System.Drawing.Point(236, 142);
+            this.TerrainLayer3ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer3ColorTextBox.Name = "TerrainLayer3ColorTextBox";
-            this.TerrainLayer3ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer3ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer3ColorTextBox.TabIndex = 108;
             // 
             // TerrainLayer3NumericUpDown
             // 
-            this.TerrainLayer3NumericUpDown.Location = new System.Drawing.Point(100, 92);
+            this.TerrainLayer3NumericUpDown.Location = new System.Drawing.Point(150, 142);
+            this.TerrainLayer3NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer3NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -3143,7 +3466,7 @@
             0,
             0});
             this.TerrainLayer3NumericUpDown.Name = "TerrainLayer3NumericUpDown";
-            this.TerrainLayer3NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer3NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer3NumericUpDown.TabIndex = 107;
             this.TerrainLayer3NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -3154,26 +3477,29 @@
             // TerrainLayer2CheckBox
             // 
             this.TerrainLayer2CheckBox.AutoSize = true;
-            this.TerrainLayer2CheckBox.Location = new System.Drawing.Point(6, 69);
+            this.TerrainLayer2CheckBox.Location = new System.Drawing.Point(9, 106);
+            this.TerrainLayer2CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer2CheckBox.Name = "TerrainLayer2CheckBox";
-            this.TerrainLayer2CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer2CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer2CheckBox.TabIndex = 106;
             this.TerrainLayer2CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer2AliasTextBox
             // 
-            this.TerrainLayer2AliasTextBox.Location = new System.Drawing.Point(22, 66);
+            this.TerrainLayer2AliasTextBox.Location = new System.Drawing.Point(33, 102);
+            this.TerrainLayer2AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer2AliasTextBox.Name = "TerrainLayer2AliasTextBox";
-            this.TerrainLayer2AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer2AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer2AliasTextBox.TabIndex = 105;
             this.TerrainLayer2AliasTextBox.Text = "water deep";
             this.TerrainLayer2AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer2Button
             // 
-            this.TerrainLayer2Button.Location = new System.Drawing.Point(215, 64);
+            this.TerrainLayer2Button.Location = new System.Drawing.Point(322, 98);
+            this.TerrainLayer2Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer2Button.Name = "TerrainLayer2Button";
-            this.TerrainLayer2Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer2Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer2Button.TabIndex = 104;
             this.TerrainLayer2Button.Text = "Edit";
             this.TerrainLayer2Button.UseVisualStyleBackColor = true;
@@ -3182,14 +3508,16 @@
             // 
             this.TerrainLayer2ColorTextBox.Enabled = false;
             this.TerrainLayer2ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer2ColorTextBox.Location = new System.Drawing.Point(157, 66);
+            this.TerrainLayer2ColorTextBox.Location = new System.Drawing.Point(236, 102);
+            this.TerrainLayer2ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer2ColorTextBox.Name = "TerrainLayer2ColorTextBox";
-            this.TerrainLayer2ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer2ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer2ColorTextBox.TabIndex = 103;
             // 
             // TerrainLayer2NumericUpDown
             // 
-            this.TerrainLayer2NumericUpDown.Location = new System.Drawing.Point(100, 66);
+            this.TerrainLayer2NumericUpDown.Location = new System.Drawing.Point(150, 102);
+            this.TerrainLayer2NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer2NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -3201,7 +3529,7 @@
             0,
             0});
             this.TerrainLayer2NumericUpDown.Name = "TerrainLayer2NumericUpDown";
-            this.TerrainLayer2NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer2NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer2NumericUpDown.TabIndex = 102;
             this.TerrainLayer2NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -3212,26 +3540,29 @@
             // TerrainLayer1CheckBox
             // 
             this.TerrainLayer1CheckBox.AutoSize = true;
-            this.TerrainLayer1CheckBox.Location = new System.Drawing.Point(6, 43);
+            this.TerrainLayer1CheckBox.Location = new System.Drawing.Point(9, 66);
+            this.TerrainLayer1CheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer1CheckBox.Name = "TerrainLayer1CheckBox";
-            this.TerrainLayer1CheckBox.Size = new System.Drawing.Size(15, 14);
+            this.TerrainLayer1CheckBox.Size = new System.Drawing.Size(22, 21);
             this.TerrainLayer1CheckBox.TabIndex = 101;
             this.TerrainLayer1CheckBox.UseVisualStyleBackColor = true;
             // 
             // TerrainLayer1AliasTextBox
             // 
-            this.TerrainLayer1AliasTextBox.Location = new System.Drawing.Point(22, 40);
+            this.TerrainLayer1AliasTextBox.Location = new System.Drawing.Point(33, 62);
+            this.TerrainLayer1AliasTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer1AliasTextBox.Name = "TerrainLayer1AliasTextBox";
-            this.TerrainLayer1AliasTextBox.Size = new System.Drawing.Size(72, 20);
+            this.TerrainLayer1AliasTextBox.Size = new System.Drawing.Size(106, 26);
             this.TerrainLayer1AliasTextBox.TabIndex = 100;
             this.TerrainLayer1AliasTextBox.Text = "water deep";
             this.TerrainLayer1AliasTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDisallowSpecialCharacters_KeyPress);
             // 
             // TerrainLayer1Button
             // 
-            this.TerrainLayer1Button.Location = new System.Drawing.Point(215, 38);
+            this.TerrainLayer1Button.Location = new System.Drawing.Point(322, 58);
+            this.TerrainLayer1Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer1Button.Name = "TerrainLayer1Button";
-            this.TerrainLayer1Button.Size = new System.Drawing.Size(34, 23);
+            this.TerrainLayer1Button.Size = new System.Drawing.Size(51, 35);
             this.TerrainLayer1Button.TabIndex = 30;
             this.TerrainLayer1Button.Text = "Edit";
             this.TerrainLayer1Button.UseVisualStyleBackColor = true;
@@ -3240,14 +3571,16 @@
             // 
             this.TerrainLayer1ColorTextBox.Enabled = false;
             this.TerrainLayer1ColorTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TerrainLayer1ColorTextBox.Location = new System.Drawing.Point(157, 40);
+            this.TerrainLayer1ColorTextBox.Location = new System.Drawing.Point(236, 62);
+            this.TerrainLayer1ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer1ColorTextBox.Name = "TerrainLayer1ColorTextBox";
-            this.TerrainLayer1ColorTextBox.Size = new System.Drawing.Size(52, 20);
+            this.TerrainLayer1ColorTextBox.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer1ColorTextBox.TabIndex = 29;
             // 
             // TerrainLayer1NumericUpDown
             // 
-            this.TerrainLayer1NumericUpDown.Location = new System.Drawing.Point(100, 40);
+            this.TerrainLayer1NumericUpDown.Location = new System.Drawing.Point(150, 62);
+            this.TerrainLayer1NumericUpDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TerrainLayer1NumericUpDown.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -3259,7 +3592,7 @@
             0,
             0});
             this.TerrainLayer1NumericUpDown.Name = "TerrainLayer1NumericUpDown";
-            this.TerrainLayer1NumericUpDown.Size = new System.Drawing.Size(51, 20);
+            this.TerrainLayer1NumericUpDown.Size = new System.Drawing.Size(76, 26);
             this.TerrainLayer1NumericUpDown.TabIndex = 27;
             this.TerrainLayer1NumericUpDown.Value = new decimal(new int[] {
             2000,
@@ -3277,19 +3610,21 @@
             this.BuildingTabPage.Controls.Add(this.BuildingsEditButton);
             this.BuildingTabPage.Controls.Add(this.label21);
             this.BuildingTabPage.Controls.Add(this.BuildingsTextBox);
-            this.BuildingTabPage.Location = new System.Drawing.Point(4, 22);
+            this.BuildingTabPage.Location = new System.Drawing.Point(4, 29);
+            this.BuildingTabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BuildingTabPage.Name = "BuildingTabPage";
-            this.BuildingTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.BuildingTabPage.Size = new System.Drawing.Size(269, 279);
+            this.BuildingTabPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BuildingTabPage.Size = new System.Drawing.Size(408, 436);
             this.BuildingTabPage.TabIndex = 4;
             this.BuildingTabPage.Text = "Buildings";
             this.BuildingTabPage.UseVisualStyleBackColor = true;
             // 
             // BuildingsOutlineEditButton
             // 
-            this.BuildingsOutlineEditButton.Location = new System.Drawing.Point(228, 63);
+            this.BuildingsOutlineEditButton.Location = new System.Drawing.Point(342, 97);
+            this.BuildingsOutlineEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BuildingsOutlineEditButton.Name = "BuildingsOutlineEditButton";
-            this.BuildingsOutlineEditButton.Size = new System.Drawing.Size(34, 23);
+            this.BuildingsOutlineEditButton.Size = new System.Drawing.Size(51, 35);
             this.BuildingsOutlineEditButton.TabIndex = 77;
             this.BuildingsOutlineEditButton.Text = "Edit";
             this.BuildingsOutlineEditButton.UseVisualStyleBackColor = true;
@@ -3297,9 +3632,10 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(10, 68);
+            this.label22.Location = new System.Drawing.Point(15, 105);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(85, 13);
+            this.label22.Size = new System.Drawing.Size(127, 20);
             this.label22.TabIndex = 76;
             this.label22.Text = "Building Outlines";
             // 
@@ -3307,35 +3643,40 @@
             // 
             this.BuildingsOutlineTextBox.Enabled = false;
             this.BuildingsOutlineTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.BuildingsOutlineTextBox.Location = new System.Drawing.Point(121, 65);
+            this.BuildingsOutlineTextBox.Location = new System.Drawing.Point(182, 100);
+            this.BuildingsOutlineTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BuildingsOutlineTextBox.Name = "BuildingsOutlineTextBox";
-            this.BuildingsOutlineTextBox.Size = new System.Drawing.Size(101, 20);
+            this.BuildingsOutlineTextBox.Size = new System.Drawing.Size(150, 26);
             this.BuildingsOutlineTextBox.TabIndex = 75;
             // 
             // ShowBuildingOutlinesCheckBox
             // 
             this.ShowBuildingOutlinesCheckBox.AutoSize = true;
             this.ShowBuildingOutlinesCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ShowBuildingOutlinesCheckBox.Location = new System.Drawing.Point(10, 9);
+            this.ShowBuildingOutlinesCheckBox.Location = new System.Drawing.Point(15, 14);
+            this.ShowBuildingOutlinesCheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ShowBuildingOutlinesCheckBox.Name = "ShowBuildingOutlinesCheckBox";
-            this.ShowBuildingOutlinesCheckBox.Size = new System.Drawing.Size(139, 17);
+            this.ShowBuildingOutlinesCheckBox.Size = new System.Drawing.Size(205, 24);
             this.ShowBuildingOutlinesCheckBox.TabIndex = 74;
             this.ShowBuildingOutlinesCheckBox.Text = "Show Buildings Outlines";
             this.ShowBuildingOutlinesCheckBox.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
-            this.groupBox8.Location = new System.Drawing.Point(6, 33);
+            this.groupBox8.Location = new System.Drawing.Point(9, 51);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(266, 2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox8.Size = new System.Drawing.Size(399, 3);
             this.groupBox8.TabIndex = 73;
             this.groupBox8.TabStop = false;
             // 
             // BuildingsEditButton
             // 
-            this.BuildingsEditButton.Location = new System.Drawing.Point(228, 37);
+            this.BuildingsEditButton.Location = new System.Drawing.Point(342, 57);
+            this.BuildingsEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BuildingsEditButton.Name = "BuildingsEditButton";
-            this.BuildingsEditButton.Size = new System.Drawing.Size(34, 23);
+            this.BuildingsEditButton.Size = new System.Drawing.Size(51, 35);
             this.BuildingsEditButton.TabIndex = 71;
             this.BuildingsEditButton.Text = "Edit";
             this.BuildingsEditButton.UseVisualStyleBackColor = true;
@@ -3343,9 +3684,10 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(10, 42);
+            this.label21.Location = new System.Drawing.Point(15, 65);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(49, 13);
+            this.label21.Size = new System.Drawing.Size(73, 20);
             this.label21.TabIndex = 70;
             this.label21.Text = "Buildings";
             // 
@@ -3353,9 +3695,10 @@
             // 
             this.BuildingsTextBox.Enabled = false;
             this.BuildingsTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.BuildingsTextBox.Location = new System.Drawing.Point(121, 39);
+            this.BuildingsTextBox.Location = new System.Drawing.Point(182, 60);
+            this.BuildingsTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BuildingsTextBox.Name = "BuildingsTextBox";
-            this.BuildingsTextBox.Size = new System.Drawing.Size(101, 20);
+            this.BuildingsTextBox.Size = new System.Drawing.Size(150, 26);
             this.BuildingsTextBox.TabIndex = 69;
             // 
             // ZoomTrackBar
@@ -3364,11 +3707,12 @@
             this.ZoomTrackBar.AutoSize = false;
             this.ZoomTrackBar.Enabled = false;
             this.ZoomTrackBar.LargeChange = 1;
-            this.ZoomTrackBar.Location = new System.Drawing.Point(655, 710);
+            this.ZoomTrackBar.Location = new System.Drawing.Point(982, 1092);
+            this.ZoomTrackBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ZoomTrackBar.Maximum = 4;
             this.ZoomTrackBar.Minimum = -4;
             this.ZoomTrackBar.Name = "ZoomTrackBar";
-            this.ZoomTrackBar.Size = new System.Drawing.Size(141, 23);
+            this.ZoomTrackBar.Size = new System.Drawing.Size(212, 35);
             this.ZoomTrackBar.TabIndex = 13;
             this.ZoomTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ZoomTrackBar_MouseUp);
             // 
@@ -3376,9 +3720,10 @@
             // 
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(582, 713);
+            this.label18.Location = new System.Drawing.Point(873, 1097);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 13);
+            this.label18.Size = new System.Drawing.Size(85, 20);
             this.label18.TabIndex = 14;
             this.label18.Text = "Zoom level";
             // 
@@ -3387,9 +3732,10 @@
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(793, 709);
+            this.label19.Location = new System.Drawing.Point(1190, 1091);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(17, 18);
+            this.label19.Size = new System.Drawing.Size(27, 29);
             this.label19.TabIndex = 15;
             this.label19.Text = "+";
             // 
@@ -3398,9 +3744,10 @@
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(647, 709);
+            this.label20.Location = new System.Drawing.Point(970, 1091);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(13, 18);
+            this.label20.Size = new System.Drawing.Size(21, 29);
             this.label20.TabIndex = 16;
             this.label20.Text = "-";
             // 
@@ -3408,9 +3755,10 @@
             // 
             this.ResetZoomButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ResetZoomButton.Enabled = false;
-            this.ResetZoomButton.Location = new System.Drawing.Point(816, 709);
+            this.ResetZoomButton.Location = new System.Drawing.Point(1224, 1091);
+            this.ResetZoomButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResetZoomButton.Name = "ResetZoomButton";
-            this.ResetZoomButton.Size = new System.Drawing.Size(53, 20);
+            this.ResetZoomButton.Size = new System.Drawing.Size(80, 31);
             this.ResetZoomButton.TabIndex = 18;
             this.ResetZoomButton.Text = "Reset";
             this.ResetZoomButton.UseVisualStyleBackColor = true;
@@ -3426,18 +3774,20 @@
             "2560 x 1200",
             "3840 x 2160",
             "7680 x 4320"});
-            this.SizesComboBox.Location = new System.Drawing.Point(96, 19);
+            this.SizesComboBox.Location = new System.Drawing.Point(144, 29);
+            this.SizesComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SizesComboBox.Name = "SizesComboBox";
-            this.SizesComboBox.Size = new System.Drawing.Size(121, 21);
+            this.SizesComboBox.Size = new System.Drawing.Size(180, 28);
             this.SizesComboBox.TabIndex = 70;
             // 
             // SizeLabel
             // 
             this.SizeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SizeLabel.AutoSize = true;
-            this.SizeLabel.Location = new System.Drawing.Point(12, 22);
+            this.SizeLabel.Location = new System.Drawing.Point(18, 34);
+            this.SizeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SizeLabel.Name = "SizeLabel";
-            this.SizeLabel.Size = new System.Drawing.Size(27, 13);
+            this.SizeLabel.Size = new System.Drawing.Size(40, 20);
             this.SizeLabel.TabIndex = 71;
             this.SizeLabel.Text = "Size";
             // 
@@ -3446,9 +3796,11 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.ColorsTabControl);
-            this.groupBox3.Location = new System.Drawing.Point(875, 228);
+            this.groupBox3.Location = new System.Drawing.Point(1312, 351);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(295, 330);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(442, 508);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Colours and Options";
@@ -3464,18 +3816,80 @@
             this.groupBox5.Controls.Add(this.PNGRadioButton);
             this.groupBox5.Controls.Add(this.OutputFormatLabel);
             this.groupBox5.Controls.Add(this.JPEGRadioButton);
-            this.groupBox5.Location = new System.Drawing.Point(875, 564);
+            this.groupBox5.Location = new System.Drawing.Point(1312, 868);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(295, 95);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox5.Size = new System.Drawing.Size(442, 146);
             this.groupBox5.TabIndex = 20;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Output";
             // 
+            // LightRailEditButton
+            // 
+            this.LightRailEditButton.Location = new System.Drawing.Point(333, 223);
+            this.LightRailEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LightRailEditButton.Name = "LightRailEditButton";
+            this.LightRailEditButton.Size = new System.Drawing.Size(51, 35);
+            this.LightRailEditButton.TabIndex = 87;
+            this.LightRailEditButton.Text = "Edit";
+            this.LightRailEditButton.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(9, 232);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(75, 20);
+            this.label25.TabIndex = 88;
+            this.label25.Text = "Light Rail";
+            // 
+            // LightRailTextBox
+            // 
+            this.LightRailTextBox.Enabled = false;
+            this.LightRailTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.LightRailTextBox.Location = new System.Drawing.Point(198, 226);
+            this.LightRailTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LightRailTextBox.Name = "LightRailTextBox";
+            this.LightRailTextBox.Size = new System.Drawing.Size(124, 26);
+            this.LightRailTextBox.TabIndex = 86;
+            // 
+            // MonorailEditButton
+            // 
+            this.MonorailEditButton.Location = new System.Drawing.Point(333, 260);
+            this.MonorailEditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MonorailEditButton.Name = "MonorailEditButton";
+            this.MonorailEditButton.Size = new System.Drawing.Size(51, 35);
+            this.MonorailEditButton.TabIndex = 90;
+            this.MonorailEditButton.Text = "Edit";
+            this.MonorailEditButton.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(9, 269);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(69, 20);
+            this.label26.TabIndex = 91;
+            this.label26.Text = "Monorail";
+            // 
+            // MonorailTextBox
+            // 
+            this.MonorailTextBox.Enabled = false;
+            this.MonorailTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.MonorailTextBox.Location = new System.Drawing.Point(198, 263);
+            this.MonorailTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MonorailTextBox.Name = "MonorailTextBox";
+            this.MonorailTextBox.Size = new System.Drawing.Size(124, 26);
+            this.MonorailTextBox.TabIndex = 89;
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 733);
+            this.ClientSize = new System.Drawing.Size(1773, 1128);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.SaveButton);
@@ -3491,7 +3905,8 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(750, 500);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(1114, 739);
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "SC4Cartographer";
@@ -3825,6 +4240,18 @@
         private System.Windows.Forms.Label SizeLabel;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button HighwayEditButton;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox HighwayTextBox;
+        private System.Windows.Forms.Button DirtRoadEditButton;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox DirtRoadTextBox;
+        private System.Windows.Forms.Button MonorailEditButton;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox MonorailTextBox;
+        private System.Windows.Forms.Button LightRailEditButton;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox LightRailTextBox;
     }
 }
 

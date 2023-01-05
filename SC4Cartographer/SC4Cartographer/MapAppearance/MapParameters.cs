@@ -32,7 +32,14 @@ namespace SC4CartographerUI
         OneWayRoadNetwork1,
         AvenueNetwork1,
         RailwayNetwork1,
-        SubwayNetwork2
+        SubwayNetwork2,
+        ElevatedHighwayNetwork1,
+        PipeNetwork1,
+        PowerLineNetwork1,
+        LightRailNetwork1,
+        MonorailNetwork1,
+        DirtRoadNetwork1,
+        GroundHighwayNetwork1
     }
 
     public enum MapColorObject
@@ -61,6 +68,11 @@ namespace SC4CartographerUI
         Avenue,
         Railway,
         Subway,
+        
+        LightRail,
+        MaxisHighway,
+        Monorail,
+        DirtRoad,
 
         Buildings,
         BuildingsOutline,
@@ -189,6 +201,10 @@ namespace SC4CartographerUI
             MapObject.OneWayRoadNetwork1,
             MapObject.AvenueNetwork1,
             MapObject.RailwayNetwork1,
+            MapObject.MonorailNetwork1,
+            MapObject.ElevatedHighwayNetwork1,
+            MapObject.GroundHighwayNetwork1,
+            MapObject.DirtRoadNetwork1
         };
 
         public Dictionary<TerrainObject, (bool enabled, string alias, MapColorObject colorObject, int height)> TerrainDataDictionary
@@ -250,6 +266,10 @@ namespace SC4CartographerUI
             {MapColorObject.Avenue, Color.FromArgb(80, 80, 80)},
             {MapColorObject.Railway, Color.FromArgb(179, 24, 21)},
             {MapColorObject.Subway, Color.FromArgb(120, 0, 180)},
+            {MapColorObject.LightRail, Color.FromArgb(120, 0, 180)},
+            {MapColorObject.MaxisHighway, Color.FromArgb(254, 80, 0)},
+            {MapColorObject.DirtRoad, Color.FromArgb(254, 80, 0)},
+            {MapColorObject.Monorail, Color.FromArgb(135, 206, 235)},
 
             {MapColorObject.Buildings, Color.FromArgb(178, 178, 178)},
             {MapColorObject.BuildingsOutline, Color.FromArgb(153, 153, 153)},
@@ -288,10 +308,17 @@ namespace SC4CartographerUI
         {
             {0x00, MapObject.RoadNetwork1},
             {0x01, MapObject.RailwayNetwork1},
+            {0x02, MapObject.ElevatedHighwayNetwork1},
             {0x03, MapObject.StreetNetwork1},
+            {0x04, MapObject.PipeNetwork1},
+            {0x05, MapObject.PowerLineNetwork1},
             {0x06, MapObject.AvenueNetwork1},
             {0x07, MapObject.SubwayNetwork2},
+            {0x08, MapObject.LightRailNetwork1},
+            {0x09, MapObject.MonorailNetwork1},
             {0x0A, MapObject.OneWayRoadNetwork1},
+            {0x0B, MapObject.DirtRoadNetwork1},
+            {0x0C, MapObject.GroundHighwayNetwork1}
         };
     }
 }
